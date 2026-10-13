@@ -24,7 +24,7 @@ export const portfolioData: PortfolioData = {
         "Design and build AI agents and multi-agent workflows using Claude and OpenAI APIs, LangGraph, and the Model Context Protocol (MCP).",
         "Develop custom MCP servers and tool integrations that let agents read and act on business systems, including REST APIs, databases, and files.",
         "Build RAG pipelines with vector databases, write evaluation suites to measure agent accuracy, and add guardrails, tracing, and cost controls.",
-        "Use AI coding agents such as Claude Code and Cursor to speed up delivery while keeping code reviewed, tested, and maintainable."
+        "Use AI coding agents such as Codex, Claude Code, and Cursor to speed up delivery while keeping code reviewed, tested, and maintainable."
       ],
       "technologies": [
         "Claude API",
@@ -300,6 +300,9 @@ export const portfolioData: PortfolioData = {
         },
         {
           "name": "Claude Code"
+        },
+        {
+          "name": "Codex"
         },
         {
           "name": "Cursor"
