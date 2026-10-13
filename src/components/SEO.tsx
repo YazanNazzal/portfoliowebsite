@@ -12,7 +12,11 @@ export function SEO() {
       {/* Additional */}
       <meta name="author" content={name} />
       <meta name="keywords" content={[
-        'Software Developer',
+        'Software Engineer',
+        'AI Agentic Engineer',
+        'MCP',
+        'RAG',
+        'LangGraph',
         'React',
         'React Native',
         'Angular',

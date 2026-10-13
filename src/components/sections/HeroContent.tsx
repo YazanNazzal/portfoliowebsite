@@ -6,8 +6,7 @@ import { portfolioData } from '../../data/portfolio';
 import { useEffect, useState } from 'react';
 import { usePointerTilt } from '../../hooks/usePointerTilt';
 
-function Typewriter({ reducedMotion }: { reducedMotion: boolean }) {
-  const text = 'Software Engineer';
+function Typewriter({ reducedMotion, text }: { reducedMotion: boolean; text: string }) {
   const [display, setDisplay] = useState('');
 
   useEffect(() => {
@@ -30,7 +29,7 @@ function Typewriter({ reducedMotion }: { reducedMotion: boolean }) {
     };
     timer = setTimeout(tick, 450);
     return () => clearTimeout(timer);
-  }, [reducedMotion]);
+  }, [reducedMotion, text]);
 
   return <>
     <span className="sr-only">{text}</span>
@@ -45,13 +44,13 @@ interface HeroContentProps {
   isVisible: boolean; prefersReducedMotion: boolean;
 }
 
-export function HeroContent({ name, location, email, github, linkedin, isVisible, prefersReducedMotion }: HeroContentProps) {
+export function HeroContent({ name, title, summary, location, email, github, linkedin, isVisible, prefersReducedMotion }: HeroContentProps) {
   const portraitTilt = usePointerTilt(5);
   const stats = [
     { value: String(portfolioData.projects.length).padStart(2, '0'), label: 'Selected projects' },
-    { value: String(portfolioData.experience.length).padStart(2, '0'), label: 'Teams worked with' },
+    { value: String(portfolioData.experience.length).padStart(2, '0'), label: 'Professional roles' },
     { value: String(new Set(portfolioData.skills.flatMap(group => group.skills.map(skill => skill.name))).size) + '+', label: 'Technologies & tools' },
-    { value: 'Web + Mobile', label: 'Built with purpose' },
+    { value: 'AI + Web + Mobile', label: 'Built with purpose' },
   ];
   return (
     <div className={`hero-container ${isVisible || prefersReducedMotion ? 'hero-entered' : ''}`}>
@@ -59,8 +58,8 @@ export function HeroContent({ name, location, email, github, linkedin, isVisible
         <div className="hero-copy">
           <div className="hero-eyebrow"><span className="status-dot" /> Hey, from {location} <span aria-hidden="true">&#x1F1F5;&#x1F1F8;</span></div>
           <h1 id="hero-title" className="hero-name"><span className="hero-intro">I'm</span><span className="gradient-text">{name}</span><span className="hero-name-dot">.</span></h1>
-          <p className="hero-role"><span aria-hidden="true">$</span> <Typewriter reducedMotion={prefersReducedMotion} /></p>
-          <p className="hero-pitch">I turn ideas into <strong>thoughtful digital experiences.</strong> From responsive web interfaces to mobile apps and the APIs behind them, I build with React, React Native, Angular, .NET Core, and Flutter.</p>
+          <p className="hero-role"><span aria-hidden="true">$</span> <Typewriter reducedMotion={prefersReducedMotion} text={title} /></p>
+          <p className="hero-pitch">{summary}</p>
           <div className="hero-actions">
             <a className="design-button design-button-primary focus-ring" href="#projects">Explore my work <ArrowDown size={17} aria-hidden="true" /></a>
             <a className="design-button focus-ring" href="/Yazan_Nazzal_CV.pdf" download="Yazan_Nazzal_CV.pdf">Download CV <Download size={17} aria-hidden="true" /></a>

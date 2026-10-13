@@ -3,15 +3,38 @@ import type { PortfolioData } from '../types';
 export const portfolioData: PortfolioData = {
   "personal": {
     "name": "Yazan Nazzal",
-    "title": "Software Developer",
+    "title": "Software Engineer | AI Agentic Engineering",
     "location": "Ramallah, Palestine",
     "email": "Yazan98nazzal@gmail.com",
     "phone": "+972 566017708",
     "github": "https://github.com/YazanNazal",
     "linkedin": "https://www.linkedin.com/in/yazan-nazzal-124287239/",
-    "summary": "Software Developer with experience in frontend and full-stack development using React, React Native, Angular, and .NET Core. Focused on building scalable, maintainable applications, writing clean code, and creating thoughtful user experiences through collaboration and continuous learning."
+    "summary": "Software Engineer focused on AI agentic engineering, with a strong background in frontend and full-stack development. Builds LLM-powered agents and multi-agent workflows that plan, call tools, and automate real work using Claude, OpenAI, MCP, and LangChain/LangGraph. Experienced in scalable, maintainable applications with React, React Native, Angular, and .NET Core, and taking AI features from prototype to production with evaluation, guardrails, and clean integration into existing products."
   },
   "experience": [
+    {
+      "id": "freelance-ai-agentic",
+      "company": "Freelance",
+      "position": "AI Agentic Engineer",
+      "location": "Remote",
+      "startDate": "Aug 2025",
+      "endDate": "Present",
+      "current": true,
+      "description": [
+        "Design and build AI agents and multi-agent workflows using Claude and OpenAI APIs, LangGraph, and the Model Context Protocol (MCP).",
+        "Develop custom MCP servers and tool integrations that let agents read and act on business systems, including REST APIs, databases, and files.",
+        "Build RAG pipelines with vector databases, write evaluation suites to measure agent accuracy, and add guardrails, tracing, and cost controls.",
+        "Use AI coding agents such as Claude Code and Cursor to speed up delivery while keeping code reviewed, tested, and maintainable."
+      ],
+      "technologies": [
+        "Claude API",
+        "OpenAI API",
+        "LangGraph",
+        "MCP",
+        "RAG",
+        "Vector Databases"
+      ]
+    },
     {
       "id": "emicrolearn",
       "company": "eMicrolearn (Subsidiary of Pitman)",
@@ -142,12 +165,6 @@ export const portfolioData: PortfolioData = {
         },
         {
           "name": "SQL Server"
-        },
-        {
-          "name": "Supabase"
-        },
-        {
-          "name": "FastAPI"
         }
       ]
     },
@@ -176,6 +193,12 @@ export const portfolioData: PortfolioData = {
         },
         {
           "name": "JavaScript"
+        },
+        {
+          "name": "TypeScript"
+        },
+        {
+          "name": "Python"
         }
       ]
     },
@@ -211,41 +234,132 @@ export const portfolioData: PortfolioData = {
       ]
     },
     {
-      "category": "AI & Agents",
+      "category": "AI & Agentic Engineering",
       "skills": [
         {
-          "name": "AI-assisted development"
+          "name": "LLM Agents"
         },
         {
-          "name": "Working with AI agents"
+          "name": "Multi-Agent Orchestration"
         },
         {
-          "name": "AI tools"
+          "name": "Tool/Function Calling"
+        },
+        {
+          "name": "MCP Servers"
+        },
+        {
+          "name": "RAG"
+        },
+        {
+          "name": "Embeddings & Semantic Search"
+        },
+        {
+          "name": "Prompt & Context Engineering"
+        },
+        {
+          "name": "Structured Outputs"
+        },
+        {
+          "name": "Agent Memory"
+        },
+        {
+          "name": "Agent Evaluation & Guardrails"
+        }
+      ]
+    },
+    {
+      "category": "AI Frameworks & Tools",
+      "skills": [
+        {
+          "name": "Claude API"
+        },
+        {
+          "name": "OpenAI API"
+        },
+        {
+          "name": "Claude Agent SDK"
+        },
+        {
+          "name": "OpenAI Agents SDK"
+        },
+        {
+          "name": "LangChain"
+        },
+        {
+          "name": "LangGraph"
+        },
+        {
+          "name": "LlamaIndex"
+        },
+        {
+          "name": "Vercel AI SDK"
+        },
+        {
+          "name": "n8n"
+        },
+        {
+          "name": "Claude Code"
+        },
+        {
+          "name": "Cursor"
+        },
+        {
+          "name": "GitHub Copilot"
+        }
+      ]
+    },
+    {
+      "category": "Vector DBs & LLMOps",
+      "skills": [
+        {
+          "name": "pgvector"
+        },
+        {
+          "name": "Pinecone"
+        },
+        {
+          "name": "Qdrant"
+        },
+        {
+          "name": "ChromaDB"
+        },
+        {
+          "name": "LangSmith"
+        },
+        {
+          "name": "Langfuse"
+        },
+        {
+          "name": "Docker"
+        }
+      ]
+    },
+    {
+      "category": "AI Cloud Services",
+      "skills": [
+        {
+          "name": "Azure OpenAI"
+        },
+        {
+          "name": "Azure AI Foundry"
+        },
+        {
+          "name": "AWS Bedrock"
+        },
+        {
+          "name": "Google Vertex AI"
+        },
+        {
+          "name": "Gemini API"
+        },
+        {
+          "name": "Hugging Face"
         }
       ]
     }
   ],
   "projects": [
-    {
-      "id": "blossom-booking-pwa",
-      "title": "Booking Platform & PWA",
-      "description": "A complete booking platform with a responsive web interface and an installable Progressive Web App (PWA).",
-      "longDescription": "An end-to-end reservation application connecting the booking interface to backend APIs and Supabase. The PWA provides an installable app experience across mobile and desktop, with service worker integration.",
-      "technologies": [
-        "JavaScript",
-        "Supabase",
-        "REST APIs",
-        "PWA"
-      ],
-      "category": "fullstack",
-      "featured": true,
-      "highlights": [
-        "Complete reservation workflow",
-        "Backend API and Supabase integration",
-        "Installable PWA with service worker integration",
-        "Responsive interface for mobile and desktop"
-      ]
-    },
     {
       "id": "apartment-reservation",
       "title": "Apartment Reservation Mobile App",

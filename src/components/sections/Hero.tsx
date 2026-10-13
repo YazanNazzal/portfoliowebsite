@@ -12,7 +12,7 @@ export function Hero() {
         <HeroContent {...portfolioData.personal} isVisible={isVisible} prefersReducedMotion={prefersReducedMotion} />
       </section>
       <div className="stack-strip" aria-label="Primary technologies">
-        {['React', 'TypeScript', 'React Native', 'Angular', '.NET Core', 'Flutter', 'Firebase'].map(tech => <span key={tech}><span aria-hidden="true">&#x2726;</span> {tech}</span>)}
+        {['Claude', 'OpenAI', 'MCP', 'LangGraph', 'React', 'TypeScript', '.NET Core', 'Python'].map(tech => <span key={tech}><span aria-hidden="true">&#x2726;</span> {tech}</span>)}
       </div>
     </>
   );
