@@ -80,6 +80,7 @@ export function HeroContent({ name, title, summary, location, email, github, lin
           </div>
           <div className="portrait-chip chip-react"><span className="chip-dot" /> React & React Native</div>
           <div className="portrait-chip chip-fullstack"><span className="chip-dot" /> Full-stack developer</div>
+          <div className="portrait-chip chip-ai"><span className="chip-dot" /> AI Agentic Engineer</div>
           <div className="portrait-chip chip-location"><MapPin size={14} aria-hidden="true" /> {location}</div>
           <span className="portrait-label" aria-hidden="true">&lt; build. learn. repeat. /&gt;</span>
         </div>

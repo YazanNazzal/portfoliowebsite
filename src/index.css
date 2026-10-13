@@ -159,9 +159,11 @@
   .portrait-chip { position: absolute; display: inline-flex; align-items: center; gap: 8px; background: #0b1120ec; backdrop-filter: blur(10px); padding: 11px 15px; border: 1px solid #ffffff1c; border-radius: 9px; font: 10px var(--font-mono); color: #d5ddf0; box-shadow: 0 8px 25px #0005; }
   .chip-react { left: -40px; top: 38px; border-color: #38bdf844; }
   .chip-fullstack { right: -35px; bottom: 104px; border-color: #818cf84d; }
+  .chip-ai { right: -20px; top: -27px; border-color: #f472b64d; }
   .chip-location { left: -25px; bottom: -18px; border-color: #f472b640; color: #c6a4ce; }
   .chip-dot { width: 5px; height: 5px; border-radius: 50%; background: #38bdf8; }
   .chip-fullstack .chip-dot { background: #a78bfa; }
+  .chip-ai .chip-dot { background: #f472b6; }
   .portrait-label { display: block; text-align: right; margin-top: 36px; color: #596781; font: 10px var(--font-mono); }
   .hero-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; border-block: 1px solid #ffffff0c; padding: 25px 0; margin-top: 68px; }
   .hero-stats > div { padding-left: 28px; border-left: 1px solid #ffffff0c; }
@@ -190,6 +192,7 @@
   .portrait-chip { font-size: 9px; padding: 9px 10px; }
   .chip-react { left: -18px; }
   .chip-fullstack { right: -16px; }
+  .chip-ai { right: -12px; }
   .hero-stat-value { font-size: 20px; }
 }
 @media (max-width: 767px) {
@@ -229,6 +232,7 @@
   .portrait-frame::after { display: none; }
   .portrait-chip { animation: credential-float 5.5s ease-in-out infinite; }
   .chip-fullstack { animation-delay: -1.6s; }
+  .chip-ai { animation-delay: -2.4s; }
   .chip-location { animation-delay: -3s; }
   .status-dot { animation: available-pulse 2.2s ease-out infinite; }
   .portfolio-hero::before { content: ''; position: absolute; pointer-events: none; inset: -10%; background: radial-gradient(ellipse at 75% 35%, #818cf815, transparent 45%), radial-gradient(ellipse at 20% 60%, #38bdf80b, transparent 45%); animation: hero-aurora 12s ease-in-out infinite alternate; }
