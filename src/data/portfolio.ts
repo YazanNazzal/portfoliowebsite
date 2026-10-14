@@ -365,13 +365,15 @@ export const portfolioData: PortfolioData = {
   "projects": [
     {
       "id": "warraq-pdf-assistant",
-      "title": "Warraq — Arabic PDF Assistant",
-      "description": "An Arabic-first PDF assistant that answers document questions with Gemini, cited sources, and page references.",
-      "longDescription": "A responsive RTL web application for exploring text-based PDFs. Warraq extracts document text with PDF.js, retrieves relevant passages using Arabic text normalization and keyword search, and generates answers with source references that link back to the original pages.",
+      "title": "Warraq — Bilingual Document AI Assistant",
+      "description": "Ask questions in Arabic or English across PDF, Word, TXT, and PowerPoint files, with answers grounded in cited document sources.",
+      "longDescription": "Built and deployed a bilingual document assistant with browser-side extraction for PDF, Word (.docx), TXT, and PowerPoint (.pptx). Warraq combines BM25 keyword retrieval with Gemini Embedding 2 semantic search, contextual query rewriting, and evidence reranking. Adaptive review checks calculations and comparisons, while a broader retrieval pass helps when evidence is incomplete. Selective query planning and bounded in-memory caching reduce repeated API work. Source references point to PDF pages, Word sections, text parts, or presentation slides.",
       "technologies": [
         "JavaScript",
+        "Node.js",
         "Gemini API",
         "PDF.js",
+        "HTML/CSS",
         "Vercel"
       ],
       "category": "fullstack",
@@ -379,11 +381,16 @@ export const portfolioData: PortfolioData = {
       "liveUrl": "https://warraq-pdf-assistant.vercel.app/",
       "featured": true,
       "highlights": [
-        "Responsive Arabic RTL interface",
-        "Document answers with cited sources and page numbers",
-        "Original PDF page navigation and conversation export",
-        "Text-based PDFs up to 20 MB and 200 pages"
-      ]
+        "PDF, Word (.docx), TXT, and PowerPoint (.pptx) with table-aware text extraction",
+        "Arabic/English interface and questions, with RTL/LTR layouts and a dark theme",
+        "Hybrid semantic and keyword search with contextual follow-up questions",
+        "Adaptive answer review and source references tied to the document",
+        "Selective API calls and a short-lived cache for repeated answers",
+        "Original PDF page viewing, conversation export, and a Warraq home-screen icon",
+        "49 automated tests passed, plus browser extraction and live Gemini checks",
+        "Text-based files only; scanned images and legacy .doc/.ppt files require conversion"
+      ],
+      "role": "Designed and implemented the interface, document extraction, retrieval pipeline, Gemini integration, validation, and Vercel deployment."
     },
     {
       "id": "apartment-reservation",
