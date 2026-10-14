@@ -364,6 +364,28 @@ export const portfolioData: PortfolioData = {
   ],
   "projects": [
     {
+      "id": "warraq-pdf-assistant",
+      "title": "Warraq — Arabic PDF Assistant",
+      "description": "An Arabic-first PDF assistant that answers document questions with Gemini, cited sources, and page references.",
+      "longDescription": "A responsive RTL web application for exploring text-based PDFs. Warraq extracts document text with PDF.js, retrieves relevant passages using Arabic text normalization and keyword search, and generates answers with source references that link back to the original pages.",
+      "technologies": [
+        "JavaScript",
+        "Gemini API",
+        "PDF.js",
+        "Vercel"
+      ],
+      "category": "fullstack",
+      "githubUrl": "https://github.com/yazan77nazzl/Warraq-PDF-Assistant",
+      "liveUrl": "https://warraq-pdf-assistant.vercel.app/",
+      "featured": true,
+      "highlights": [
+        "Responsive Arabic RTL interface",
+        "Document answers with cited sources and page numbers",
+        "Original PDF page navigation and conversation export",
+        "Text-based PDFs up to 20 MB and 200 pages"
+      ]
+    },
+    {
       "id": "apartment-reservation",
       "title": "Apartment Reservation Mobile App",
       "description": "A Flutter mobile application featuring real-time apartment booking and a user-friendly interface.",
