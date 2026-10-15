@@ -9,7 +9,7 @@ export const portfolioData: PortfolioData = {
     "phone": "+972 566017708",
     "github": "https://github.com/YazanNazal",
     "linkedin": "https://www.linkedin.com/in/yazan-nazzal-124287239/",
-    "summary": "Software Engineer focused on AI agentic engineering, with a strong background in frontend and full-stack development. Builds LLM-powered agents and multi-agent workflows that plan, call tools, and automate real work using Claude, OpenAI, MCP, and LangChain/LangGraph. Experienced in scalable, maintainable applications with React, React Native, Angular, and .NET Core, and taking AI features from prototype to production with evaluation, guardrails, and clean integration into existing products."
+    "summary": "I turn complex ideas into practical software, from intelligent automation to web and mobile applications."
   },
   "experience": [
     {
@@ -55,11 +55,6 @@ export const portfolioData: PortfolioData = {
         "CSS3",
         "REST APIs",
         "Agile"
-      ],
-      "highlights": [
-        "Delivered responsive interfaces for a global digital learning platform",
-        "Collaborated with cross-functional teams across multiple time zones",
-        "Maintained high code quality standards through code reviews and best practices"
       ]
     },
     {
@@ -82,11 +77,6 @@ export const portfolioData: PortfolioData = {
         "JavaScript",
         "Mobile Development",
         "MVP Development"
-      ],
-      "highlights": [
-        "Led front-end development for Hakini React Native project",
-        "Delivered AZEZA MVP mobile app on schedule",
-        "Active contributor to code reviews and team knowledge sharing"
       ]
     },
     {
@@ -108,11 +98,6 @@ export const portfolioData: PortfolioData = {
         "SQL Server",
         "API Development",
         "Database Design"
-      ],
-      "highlights": [
-        "Completed intensive full-stack training program",
-        "Built multiple projects integrating Angular frontend with .NET Core backend",
-        "Gained hands-on experience with API development and database design"
       ]
     }
   ],
@@ -136,9 +121,6 @@ export const portfolioData: PortfolioData = {
       "skills": [
         {
           "name": "React JS"
-        },
-        {
-          "name": "React Native"
         },
         {
           "name": "Angular"
@@ -367,7 +349,7 @@ export const portfolioData: PortfolioData = {
       "id": "warraq-pdf-assistant",
       "title": "Warraq — Bilingual Document AI Assistant",
       "description": "Ask questions in Arabic or English across PDF, Word, TXT, and PowerPoint files, with answers grounded in cited document sources.",
-      "longDescription": "Built and deployed a bilingual document assistant with browser-side extraction for PDF, Word (.docx), TXT, and PowerPoint (.pptx). Warraq combines BM25 keyword retrieval with Gemini Embedding 2 semantic search, contextual query rewriting, and evidence reranking. Adaptive review checks calculations and comparisons, while a broader retrieval pass helps when evidence is incomplete. Selective query planning and bounded in-memory caching reduce repeated API work. Source references point to PDF pages, Word sections, text parts, or presentation slides.",
+      "longDescription": "Uses BM25 keyword retrieval alongside Gemini Embedding 2 semantic search. Contextual query rewriting and evidence reranking support follow-up questions; adaptive review checks calculations and comparisons. A broader retrieval pass handles incomplete evidence, while bounded in-memory caching reduces repeated API work.",
       "technologies": [
         "JavaScript",
         "Node.js",
@@ -381,11 +363,7 @@ export const portfolioData: PortfolioData = {
       "liveUrl": "https://warraq-pdf-assistant.vercel.app/",
       "featured": true,
       "highlights": [
-        "PDF, Word (.docx), TXT, and PowerPoint (.pptx) with table-aware text extraction",
         "Arabic/English interface and questions, with RTL/LTR layouts and a dark theme",
-        "Hybrid semantic and keyword search with contextual follow-up questions",
-        "Adaptive answer review and source references tied to the document",
-        "Selective API calls and a short-lived cache for repeated answers",
         "Original PDF page viewing, conversation export, and a Warraq home-screen icon",
         "49 automated tests passed, plus browser extraction and live Gemini checks",
         "Text-based files only; scanned images and legacy .doc/.ppt files require conversion"
@@ -400,11 +378,7 @@ export const portfolioData: PortfolioData = {
         "Flutter"
       ],
       "category": "mobile",
-      "featured": true,
-      "highlights": [
-        "Real-time apartment booking",
-        "User-friendly mobile interface"
-      ]
+      "featured": true
     },
     {
       "id": "auth-modules",
@@ -414,11 +388,7 @@ export const portfolioData: PortfolioData = {
         "React Native"
       ],
       "category": "mobile",
-      "featured": true,
-      "highlights": [
-        "Login and signup modules",
-        "Secure authentication"
-      ]
+      "featured": true
     },
     {
       "id": "online-store",
@@ -428,11 +398,7 @@ export const portfolioData: PortfolioData = {
         "ASP.NET Core 6"
       ],
       "category": "fullstack",
-      "featured": true,
-      "highlights": [
-        "Product management",
-        "Payment integration"
-      ]
+      "featured": true
     },
     {
       "id": "guessing-game",
@@ -442,11 +408,7 @@ export const portfolioData: PortfolioData = {
         "React Native"
       ],
       "category": "mobile",
-      "featured": false,
-      "highlights": [
-        "Interactive gameplay",
-        "Smooth animations"
-      ]
+      "featured": false
     },
     {
       "id": "poc-react",
@@ -456,11 +418,7 @@ export const portfolioData: PortfolioData = {
         "React JS"
       ],
       "category": "web",
-      "featured": false,
-      "highlights": [
-        "Validation of new design approaches",
-        "Focus on user engagement"
-      ]
+      "featured": false
     }
   ],
   "languages": [

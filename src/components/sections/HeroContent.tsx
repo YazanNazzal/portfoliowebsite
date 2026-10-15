@@ -1,7 +1,4 @@
-import { LinkedInIcon } from '../ui/LinkedInIcon';
-import { EmailLink } from '../ui/EmailLink';
-import { GitHubIcon } from '../ui/GitHubIcon';
-import { ArrowDown, ArrowUpRight, Mail, MapPin, Download } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Download } from 'lucide-react';
 import { portfolioData } from '../../data/portfolio';
 import { useEffect, useState } from 'react';
 import { usePointerTilt } from '../../hooks/usePointerTilt';
@@ -44,19 +41,18 @@ interface HeroContentProps {
   isVisible: boolean; prefersReducedMotion: boolean;
 }
 
-export function HeroContent({ name, title, summary, location, email, github, linkedin, isVisible, prefersReducedMotion }: HeroContentProps) {
+export function HeroContent({ name, title, summary, isVisible, prefersReducedMotion }: HeroContentProps) {
   const portraitTilt = usePointerTilt(5);
   const stats = [
     { value: String(portfolioData.projects.length).padStart(2, '0'), label: 'Selected projects' },
     { value: String(portfolioData.experience.length).padStart(2, '0'), label: 'Professional roles' },
     { value: String(new Set(portfolioData.skills.flatMap(group => group.skills.map(skill => skill.name))).size) + '+', label: 'Technologies & tools' },
-    { value: 'AI + Web + Mobile', label: 'Built with purpose' },
   ];
   return (
     <div className={`hero-container ${isVisible || prefersReducedMotion ? 'hero-entered' : ''}`}>
       <div className="hero-layout">
         <div className="hero-copy">
-          <div className="hero-eyebrow"><span className="status-dot" /> Hey, from {location} <span aria-hidden="true">&#x1F1F5;&#x1F1F8;</span></div>
+          <div className="hero-eyebrow">Welcome to my portfolio</div>
           <h1 id="hero-title" className="hero-name"><span className="hero-intro">I'm</span><span className="gradient-text">{name}</span><span className="hero-name-dot">.</span></h1>
           <p className="hero-role"><span aria-hidden="true">$</span> <Typewriter reducedMotion={prefersReducedMotion} text={title} /></p>
           <p className="hero-pitch">{summary}</p>
@@ -65,23 +61,12 @@ export function HeroContent({ name, title, summary, location, email, github, lin
             <a className="design-button focus-ring" href="/Yazan_Nazzal_CV.pdf" download="Yazan_Nazzal_CV.pdf">Download CV <Download size={17} aria-hidden="true" /></a>
             <a className="design-button focus-ring" href="#contact">Let's talk <ArrowUpRight size={17} aria-hidden="true" /></a>
           </div>
-          <div className="hero-socials">
-            <a href={github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="focus-ring"><GitHubIcon size={19} /></a>
-            <a href={linkedin} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="focus-ring"><LinkedInIcon size={19} /></a>
-            <EmailLink email={email} aria-label="Email" className="focus-ring"><Mail size={19} /></EmailLink>
-            <span>// let's connect</span>
-          </div>
         </div>
         <div className="portrait-area">
           <div className="portrait-frame interactive-portrait" {...portraitTilt}>
             <img src="/profile-photo.jpg" alt={`Portrait of ${name}`} width={1300} height={1210} fetchPriority="high" />
             <div className="portrait-shade" aria-hidden="true" />
-            <div className="portrait-caption"><span className="status-dot" /> Available for opportunities</div>
           </div>
-          <div className="portrait-chip chip-react"><span className="chip-dot" /> Mobile Developer</div>
-          <div className="portrait-chip chip-fullstack"><span className="chip-dot" /> Full-stack developer</div>
-          <div className="portrait-chip chip-ai"><span className="chip-dot" /> AI Agentic Engineer</div>
-          <div className="portrait-chip chip-location"><MapPin size={14} aria-hidden="true" /> {location}</div>
           <span className="portrait-label" aria-hidden="true">&lt; build. learn. repeat. /&gt;</span>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { Brand } from '../ui/Brand';
 import { useState, useEffect } from 'react';
 import { useActiveSection, useReducedMotion } from '../../hooks';
-import { Menu, ChevronRight, Download } from 'lucide-react';
+import { Menu, ChevronRight } from 'lucide-react';
 
 const navItems = [
   { href: '#hero', label: 'Home' },
@@ -69,7 +69,6 @@ export function Navigation() {
                   onClick={scrollToSection}
                 />
               ))}
-              <a href="/Yazan_Nazzal_CV.pdf" download="Yazan_Nazzal_CV.pdf" className="nav-cv focus-ring">Download CV <Download size={14} aria-hidden="true" /></a>
             </div>
 
             {/* Mobile Menu Button */}
