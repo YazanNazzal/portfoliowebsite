@@ -1,15 +1,15 @@
 import { Brand } from '../ui/Brand';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useActiveSection, useReducedMotion } from '../../hooks';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, House, UserRound, Code2, BriefcaseBusiness, Layers, Send } from 'lucide-react';
 
 const navItems = [
-  { href: '#hero', label: 'Home' },
-  { href: '#about', label: 'About' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#projects', label: 'Projects' },
-  { href: '#contact', label: 'Contact' },
+  { href: '#hero', label: 'Home', icon: House },
+  { href: '#about', label: 'About', icon: UserRound },
+  { href: '#skills', label: 'Skills', icon: Code2 },
+  { href: '#experience', label: 'Experience', icon: BriefcaseBusiness },
+  { href: '#projects', label: 'Projects', icon: Layers },
+  { href: '#contact', label: 'Contact', icon: Send },
 ];
 
 const sectionIds = navItems.map(item => item.href.slice(1));
@@ -17,6 +17,7 @@ const sectionIds = navItems.map(item => item.href.slice(1));
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const menuToggle = useRef<HTMLButtonElement>(null);
   const activeSection = `#${useActiveSection(sectionIds)}`;
   const prefersReducedMotion = useReducedMotion();
 
@@ -32,7 +33,10 @@ export function Navigation() {
   useEffect(() => {
     if (!isMobileMenuOpen) return;
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === 'Escape') setIsMobileMenuOpen(false);
+      if (event.key === 'Escape') {
+        setIsMobileMenuOpen(false);
+        menuToggle.current?.focus();
+      }
     };
     window.addEventListener('keydown', onKeyDown);
     return () => window.removeEventListener('keydown', onKeyDown);
@@ -74,6 +78,7 @@ export function Navigation() {
 
             {/* Mobile Menu Button */}
             <button
+              ref={menuToggle}
               className="lg:hidden min-h-11 min-w-11 p-2 rounded-lg text-text hover:bg-surface transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-expanded={isMobileMenuOpen}
@@ -86,40 +91,35 @@ export function Navigation() {
         </nav>
       </header>
 
-      {/* Mobile Side Drawer */}
+      {/* Compact mobile navigation */}
       <>
         {/* Backdrop */}
         <div
-          className={`fixed inset-0 z-40 bg-black/30 backdrop-blur-sm lg:hidden transition-opacity duration-300 ${
+          className={`fixed inset-0 top-16 z-40 bg-black/10 lg:hidden transition-opacity duration-200 ${
             isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
           }`}
           onClick={() => setIsMobileMenuOpen(false)}
           aria-hidden="true"
         />
-        {/* Drawer */}
+        {/* Non-modal panel keeps the page in view. */}
         <div
           id="mobile-menu"
           inert={!isMobileMenuOpen}
-          className={`fixed top-0 right-0 z-50 h-full w-full max-w-sm lg:hidden bg-bg/90 backdrop-blur-md border-l border-border/50 overflow-y-auto transition-transform duration-300 ease-in-out ${
-            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+          className={`mobile-nav-panel lg:hidden ${isMobileMenuOpen ? 'is-open' : ''}`}
           role="navigation"
           aria-label="Mobile navigation"
         >
-          <button className="absolute top-3 right-6 min-h-11 min-w-11 flex items-center justify-center rounded-lg text-text hover:bg-surface focus-ring" aria-label="Close navigation" onClick={() => setIsMobileMenuOpen(false)}><X size={24} /></button>
-          <div className="flex flex-col gap-2 p-6 pt-20">
+          <div className="mobile-nav-caption"><span>EXPLORE</span><span>06 sections</span></div>
+          <div className="mobile-nav-grid">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
                 aria-current={activeSection === item.href ? 'location' : undefined}
-                className={`px-4 py-3 rounded-xl text-left transition-colors ${
-                  activeSection === item.href
-                    ? 'bg-primary/10 text-primary font-medium'
-                    : 'text-text-muted hover:text-text hover:bg-surface'
-                }`}
+                className="mobile-nav-link focus-ring"
               >
-                {item.label}
+                <item.icon size={17} strokeWidth={1.6} aria-hidden="true" />
+                <span>{item.label}</span>
               </button>
             ))}
           </div>

@@ -44,7 +44,7 @@ interface HeroContentProps {
   isVisible: boolean; prefersReducedMotion: boolean;
 }
 
-export function HeroContent({ name, title, summary, email, github, linkedin, isVisible, prefersReducedMotion }: HeroContentProps) {
+export function HeroContent({ name, title, summary, email, phone, github, linkedin, isVisible, prefersReducedMotion }: HeroContentProps) {
   const portraitTilt = usePointerTilt(5);
   const stats = [
     { value: String(portfolioData.projects.length).padStart(2, '0'), label: 'Selected projects' },
@@ -63,7 +63,7 @@ export function HeroContent({ name, title, summary, email, github, linkedin, isV
           <div className="hero-actions">
             <a className="design-button design-button-primary focus-ring" href="#projects">Explore my work <ArrowDown size={17} aria-hidden="true" /></a>
             <a className="design-button focus-ring" href="/Yazan_Nazzal_CV.pdf" download="Yazan_Nazzal_CV.pdf">Download CV <Download size={17} aria-hidden="true" /></a>
-            <a className="design-button focus-ring" href="#contact">Let's talk <ArrowUpRight size={17} aria-hidden="true" /></a>
+            <a className="design-button focus-ring" href={`https://wa.me/${phone.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer" aria-label="Let's talk on WhatsApp">Let's talk <ArrowUpRight size={17} aria-hidden="true" /></a>
           </div>
           <div className="hero-socials">
             <a href={github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="focus-ring"><GitHubIcon size={19} /></a>
