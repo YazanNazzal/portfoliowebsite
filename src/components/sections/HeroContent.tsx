@@ -56,7 +56,7 @@ export function HeroContent({ name, title, summary, email, phone, github, linked
     <div className={`hero-container ${isVisible || prefersReducedMotion ? 'hero-entered' : ''}`}>
       <div className="hero-layout">
         <div className="hero-copy">
-          <div className="hero-eyebrow"><span className="status-dot" /> Welcome to my portfolio <span aria-hidden="true">&#x1F1F5;&#x1F1F8;</span></div>
+          <div className="hero-eyebrow"><span className="status-dot" /> Welcome to my portfolio <svg width="20" height="14" viewBox="0 0 30 20" role="img" aria-label="Palestine flag"><path fill="#000" d="M0 0h30v7H0z"/><path fill="#fff" d="M0 7h30v6H0z"/><path fill="#009639" d="M0 13h30v7H0z"/><path fill="#ed2e38" d="M0 0l15 10L0 20z"/></svg></div>
           <h1 id="hero-title" className="hero-name"><span className="hero-intro">I'm</span><span className="gradient-text">{name}</span><span className="hero-name-dot">.</span></h1>
           <p className="hero-role"><span aria-hidden="true">❯</span> <Typewriter reducedMotion={prefersReducedMotion} text={title} /></p>
           <p className="hero-pitch">{summary}</p>
@@ -81,7 +81,6 @@ export function HeroContent({ name, title, summary, email, phone, github, linked
           <div className="portrait-chip chip-react"><span className="chip-dot" /> Mobile Developer</div>
           <div className="portrait-chip chip-fullstack"><span className="chip-dot" /> Full-stack developer</div>
           <div className="portrait-chip chip-ai"><span className="chip-dot" /> AI Agentic Engineer</div>
-          <span className="portrait-label" aria-hidden="true">&lt; build. learn. repeat. /&gt;</span>
         </div>
       </div>
       <div className="hero-stats">{stats.map(stat => <div key={stat.label}><span className="hero-stat-value">{stat.value}</span><span className="hero-stat-label">{stat.label}</span></div>)}</div>
