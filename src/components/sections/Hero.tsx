@@ -11,6 +11,9 @@ export function Hero() {
         <div className="hero-grid-background" aria-hidden="true" />
         <HeroContent {...portfolioData.personal} isVisible={isVisible} prefersReducedMotion={prefersReducedMotion} />
       </section>
+      <div className="stack-strip" aria-label="Primary technologies">
+        {['Claude', 'OpenAI', 'MCP', 'LangGraph', 'React', 'TypeScript', '.NET Core', 'Python'].map(tech => <span key={tech}><span aria-hidden="true">&#x2726;</span> {tech}</span>)}
+      </div>
     </>
   );
 }
