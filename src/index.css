@@ -379,7 +379,7 @@
   .contact-bottom svg { flex-shrink: 0; }
   .work-filters button { min-height: 44px; }
   .profile-languages { flex-wrap: wrap; }
-  .work-grid { align-items: stretch; gap: 24px; }
+  .work-grid { align-items: start; gap: 24px; }
   .work-grid > .scroll-reveal { display: flex; }
   .work-card { display: flex; flex-direction: column; width: 100%; }
   .work-art { flex-shrink: 0; }
