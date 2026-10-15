@@ -1,7 +1,7 @@
 import { LinkedInIcon } from '../ui/LinkedInIcon';
 import { EmailLink } from '../ui/EmailLink';
 import { GitHubIcon } from '../ui/GitHubIcon';
-import { ArrowDown, ArrowUpRight, Mail, MapPin, Download } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Mail, Download } from 'lucide-react';
 import { portfolioData } from '../../data/portfolio';
 import { useEffect, useState } from 'react';
 import { usePointerTilt } from '../../hooks/usePointerTilt';
@@ -31,11 +31,11 @@ function Typewriter({ reducedMotion, text }: { reducedMotion: boolean; text: str
     return () => clearTimeout(timer);
   }, [reducedMotion, text]);
 
-  return <>
+  return <span className="typewriter">
     <span className="sr-only">{text}</span>
-    <span aria-hidden="true" className="typewriter-text">{reducedMotion ? text : display}</span>
-    {!reducedMotion && <span className="animate-cursor-blink" aria-hidden="true">▊</span>}
-  </>;
+    <span className="typewriter-sizer" aria-hidden="true">{text} ▊</span>
+    <span aria-hidden="true" className="typewriter-text">{reducedMotion ? text : display}{!reducedMotion && <span className="animate-cursor-blink">▊</span>}</span>
+  </span>;
 }
 
 interface HeroContentProps {
@@ -44,7 +44,7 @@ interface HeroContentProps {
   isVisible: boolean; prefersReducedMotion: boolean;
 }
 
-export function HeroContent({ name, title, summary, location, email, github, linkedin, isVisible, prefersReducedMotion }: HeroContentProps) {
+export function HeroContent({ name, title, summary, email, github, linkedin, isVisible, prefersReducedMotion }: HeroContentProps) {
   const portraitTilt = usePointerTilt(5);
   const stats = [
     { value: String(portfolioData.projects.length).padStart(2, '0'), label: 'Selected projects' },
@@ -56,7 +56,7 @@ export function HeroContent({ name, title, summary, location, email, github, lin
     <div className={`hero-container ${isVisible || prefersReducedMotion ? 'hero-entered' : ''}`}>
       <div className="hero-layout">
         <div className="hero-copy">
-          <div className="hero-eyebrow"><span className="status-dot" /> Hey, from {location} <span aria-hidden="true">&#x1F1F5;&#x1F1F8;</span></div>
+          <div className="hero-eyebrow"><span className="status-dot" /> Welcome to my portfolio <span aria-hidden="true">&#x1F1F5;&#x1F1F8;</span></div>
           <h1 id="hero-title" className="hero-name"><span className="hero-intro">I'm</span><span className="gradient-text">{name}</span><span className="hero-name-dot">.</span></h1>
           <p className="hero-role"><span aria-hidden="true">$</span> <Typewriter reducedMotion={prefersReducedMotion} text={title} /></p>
           <p className="hero-pitch">{summary}</p>
@@ -81,7 +81,6 @@ export function HeroContent({ name, title, summary, location, email, github, lin
           <div className="portrait-chip chip-react"><span className="chip-dot" /> Mobile Developer</div>
           <div className="portrait-chip chip-fullstack"><span className="chip-dot" /> Full-stack developer</div>
           <div className="portrait-chip chip-ai"><span className="chip-dot" /> AI Agentic Engineer</div>
-          <div className="portrait-chip chip-location"><MapPin size={14} aria-hidden="true" /> {location}</div>
           <span className="portrait-label" aria-hidden="true">&lt; build. learn. repeat. /&gt;</span>
         </div>
       </div>

@@ -64,28 +64,34 @@ export function useActiveSection(sectionIds: string[]) {
   const [activeId, setActiveId] = useState(sectionIds[0] || '');
 
   useEffect(() => {
-    const observers = sectionIds.map((id) => {
+    const sections = sectionIds.flatMap((id) => {
       const element = document.getElementById(id);
-      if (!element) return null;
-
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            setActiveId(id);
-          }
-        },
-        {
-          rootMargin: '-20% 0px -60% 0px',
-          threshold: 0,
-        }
-      );
-
-      observer.observe(element);
-      return observer;
+      return element ? [{ id, element }] : [];
     });
-
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      const marker = (document.querySelector('header')?.getBoundingClientRect().height ?? 80) + 24;
+      let current = sections[0]?.id ?? '';
+      for (const section of sections) {
+        if (section.element.getBoundingClientRect().top <= marker + 1) current = section.id;
+      }
+      if (window.scrollY > 0 && window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+        current = sections[sections.length - 1]?.id ?? current;
+      }
+      setActiveId(current);
+    };
+    const schedule = () => { if (!frame) frame = requestAnimationFrame(update); };
+    const resizeObserver = new ResizeObserver(schedule);
+    sections.forEach(({ element }) => resizeObserver.observe(element));
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
     return () => {
-      observers.forEach((observer) => observer?.disconnect());
+      cancelAnimationFrame(frame);
+      resizeObserver.disconnect();
+      window.removeEventListener('scroll', schedule);
+      window.removeEventListener('resize', schedule);
     };
   }, [sectionIds]);
 

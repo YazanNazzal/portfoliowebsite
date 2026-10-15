@@ -138,9 +138,6 @@ export const portfolioData: PortfolioData = {
           "name": "React JS"
         },
         {
-          "name": "React Native"
-        },
-        {
           "name": "Angular"
         },
         {
@@ -367,7 +364,7 @@ export const portfolioData: PortfolioData = {
       "id": "warraq-pdf-assistant",
       "title": "Warraq — Bilingual Document AI Assistant",
       "description": "Ask questions in Arabic or English across PDF, Word, TXT, and PowerPoint files, with answers grounded in cited document sources.",
-      "longDescription": "Built and deployed a bilingual document assistant with browser-side extraction for PDF, Word (.docx), TXT, and PowerPoint (.pptx). Warraq combines BM25 keyword retrieval with Gemini Embedding 2 semantic search, contextual query rewriting, and evidence reranking. Adaptive review checks calculations and comparisons, while a broader retrieval pass helps when evidence is incomplete. Selective query planning and bounded in-memory caching reduce repeated API work. Source references point to PDF pages, Word sections, text parts, or presentation slides.",
+      "longDescription": "Warraq combines BM25 keyword retrieval with Gemini Embedding 2 semantic search, contextual query rewriting, and evidence reranking. Adaptive review checks calculations and comparisons, while a broader retrieval pass helps when evidence is incomplete. Selective query planning and bounded in-memory caching reduce repeated API work. Source references point to PDF pages, Word sections, text parts, or presentation slides.",
       "technologies": [
         "JavaScript",
         "Node.js",
@@ -381,11 +378,8 @@ export const portfolioData: PortfolioData = {
       "liveUrl": "https://warraq-pdf-assistant.vercel.app/",
       "featured": true,
       "highlights": [
-        "PDF, Word (.docx), TXT, and PowerPoint (.pptx) with table-aware text extraction",
+        "Browser-side, table-aware text extraction",
         "Arabic/English interface and questions, with RTL/LTR layouts and a dark theme",
-        "Hybrid semantic and keyword search with contextual follow-up questions",
-        "Adaptive answer review and source references tied to the document",
-        "Selective API calls and a short-lived cache for repeated answers",
         "Original PDF page viewing, conversation export, and a Warraq home-screen icon",
         "49 automated tests passed, plus browser extraction and live Gemini checks",
         "Text-based files only; scanned images and legacy .doc/.ppt files require conversion"
@@ -395,71 +389,87 @@ export const portfolioData: PortfolioData = {
     {
       "id": "apartment-reservation",
       "title": "Apartment Reservation Mobile App",
-      "description": "A Flutter mobile application featuring real-time apartment booking and a user-friendly interface.",
+      "description": "My university graduation project: a bilingual Flutter app connecting students with housing owners to find rooms, request reservations, and manage their stay.",
       "technologies": [
-        "Flutter"
+        "Flutter",
+        "Dart",
+        "Firebase",
+        "Cloud Firestore",
+        "Riverpod",
+        "GoRouter",
+        "Supabase"
       ],
       "category": "mobile",
       "featured": true,
+      "longDescription": "Students can search housing by location, price, rating, and eligibility, explore apartment and room details, and submit reservation requests for chosen dates. Owners manage listings and rooms, approve or reject requests, and review their reservation calendar. Cancellation and renewal workflows support changes to a stay. The current implementation reconstructs the workflows documented in my original graduation-project report.",
+      "githubUrl": "https://github.com/yazan77nazzl/apartment_reservation_app",
       "highlights": [
-        "Real-time apartment booking",
-        "User-friendly mobile interface"
+        "Arabic and English interfaces with right-to-left layout support",
+        "Firebase Authentication and separate student/owner routes",
+        "Real-time participant chat with timestamps and read status",
+        "In-app notices and tenant reviews linked to eligible stays",
+        "Sandbox checkout in the local demo; no live payment gateway or real payment processing"
       ]
     },
     {
       "id": "auth-modules",
       "title": "Login/Signup Authentication Modules",
-      "description": "Secure login and signup authentication modules implemented using React Native.",
+      "description": "A React Native frontend sample combining login and signup interfaces with a map view.",
       "technologies": [
         "React Native"
       ],
       "category": "mobile",
       "featured": true,
-      "highlights": [
-        "Login and signup modules",
-        "Secure authentication"
-      ]
+      "longDescription": "A mobile UI prototype that brings account-entry screens and map presentation into one application. The project focuses on frontend interface design.",
+      "githubUrl": "https://github.com/YazanNazal/Login-Signup"
     },
     {
       "id": "online-store",
       "title": "Online Store (E-Commerce Platform)",
-      "description": "A full-stack ASP.NET Core 6 web application with product management and payment integration.",
+      "description": "An ASP.NET Core 6 backend for managing stores, product categories, and products through REST endpoints.",
       "technologies": [
-        "ASP.NET Core 6"
+        "ASP.NET Core 6",
+        "C#",
+        "Entity Framework Core",
+        "SQL Server",
+        "REST API"
       ],
       "category": "fullstack",
       "featured": true,
-      "highlights": [
-        "Product management",
-        "Payment integration"
-      ]
+      "longDescription": "Implements product listing, lookup, creation, updates, and deletion, alongside store and category management. Entity Framework Core models the relationships between stores, categories, and products using a code-first database approach. The API provides the data layer for a connected frontend.",
+      "githubUrl": "https://github.com/YazanNazal/Stores"
     },
     {
       "id": "guessing-game",
       "title": "Guessing Game Mobile App",
-      "description": "A React Native guessing game focused on interactive gameplay and smooth animations.",
+      "description": "A React Native number game where the phone tries to guess your chosen number using higher-or-lower hints.",
       "technologies": [
         "React Native"
       ],
       "category": "mobile",
       "featured": false,
-      "highlights": [
-        "Interactive gameplay",
-        "Smooth animations"
-      ]
+      "longDescription": "Each hint narrows the range for the next guess. The game records the guess history, counts the rounds, and finishes when the device finds the chosen number. An alert rejects hints that contradict the selected number, and the range resets for a new game.",
+      "githubUrl": "https://github.com/YazanNazal/Guessing-Game"
     },
     {
       "id": "poc-react",
       "title": "ReactJS Proof of Concept",
-      "description": "A ReactJS proof of concept created to validate new design approaches and improve user engagement.",
+      "description": "A React admin dashboard for managing organizations, people, projects, tasks, and timecards.",
       "technologies": [
-        "React JS"
+        "React",
+        "Material UI",
+        "JavaScript",
+        "Axios",
+        "React Router",
+        "Redux"
       ],
       "category": "web",
       "featured": false,
+      "longDescription": "Organizes day-to-day operations into dedicated management screens. Project records can be searched from an API-backed table, added through a form, and opened for editing. The frontend uses Material UI components, React Router for navigation, Axios for API requests, and Redux tooling for application state.",
       "highlights": [
-        "Validation of new design approaches",
-        "Focus on user engagement"
+        "Separate screens for assignments, contacts, and allocation rules",
+        "Project tables show the associated organization and manager",
+        "Loading states and search results support data-heavy workflows"
       ]
     }
   ],

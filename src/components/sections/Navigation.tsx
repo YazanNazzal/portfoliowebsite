@@ -1,7 +1,7 @@
 import { Brand } from '../ui/Brand';
 import { useState, useEffect } from 'react';
 import { useActiveSection, useReducedMotion } from '../../hooks';
-import { Menu, ChevronRight, Download } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const navItems = [
   { href: '#hero', label: 'Home' },
@@ -24,6 +24,7 @@ export function Navigation() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -69,18 +70,17 @@ export function Navigation() {
                   onClick={scrollToSection}
                 />
               ))}
-              <a href="/Yazan_Nazzal_CV.pdf" download="Yazan_Nazzal_CV.pdf" className="nav-cv focus-ring">Download CV <Download size={14} aria-hidden="true" /></a>
             </div>
 
             {/* Mobile Menu Button */}
             <button
-              className="lg:hidden p-2 rounded-lg text-text hover:bg-surface transition-colors"
+              className="lg:hidden min-h-11 min-w-11 p-2 rounded-lg text-text hover:bg-surface transition-colors"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-expanded={isMobileMenuOpen}
               aria-controls="mobile-menu"
               aria-label={isMobileMenuOpen ? 'Close menu' : 'Open menu'}
             >
-              {isMobileMenuOpen ? <ChevronRight className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
           </div>
         </nav>
@@ -106,11 +106,13 @@ export function Navigation() {
           role="navigation"
           aria-label="Mobile navigation"
         >
+          <button className="absolute top-3 right-6 min-h-11 min-w-11 flex items-center justify-center rounded-lg text-text hover:bg-surface focus-ring" aria-label="Close navigation" onClick={() => setIsMobileMenuOpen(false)}><X size={24} /></button>
           <div className="flex flex-col gap-2 p-6 pt-20">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={() => scrollToSection(item.href)}
+                aria-current={activeSection === item.href ? 'location' : undefined}
                 className={`px-4 py-3 rounded-xl text-left transition-colors ${
                   activeSection === item.href
                     ? 'bg-primary/10 text-primary font-medium'
@@ -141,10 +143,10 @@ function NavLink({
   return (
     <button
       onClick={() => onClick(href)}
-      className={`relative px-2 py-2 text-sm font-medium transition-colors ${
+      className={`relative min-h-11 px-2 py-2 text-sm font-medium transition-colors ${
         isActive ? 'text-primary' : 'text-text-muted hover:text-text'
       }`}
-      aria-current={isActive ? 'page' : undefined}
+      aria-current={isActive ? 'location' : undefined}
     >
       {label}
       {isActive && (
