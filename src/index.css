@@ -374,6 +374,7 @@
   .expertise-card .technology-tags { margin-bottom: 30px; }
   .expertise-bottom { margin-top: auto; }
   .contact-bottom { flex-wrap: wrap; }
+  .editorial-section.contact-finale { padding-bottom: 40px; }
   .contact-bottom a { min-height: 44px; }
   .contact-bottom svg { flex-shrink: 0; }
   .work-filters button { min-height: 44px; }
