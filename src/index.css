@@ -127,7 +127,7 @@
 /* Portfolio presentation */
 @layer components {
   .gradient-text { background-image: linear-gradient(105deg, #38bdf8 0%, #818cf8 52%, #f472b6 100%); }
-  .portfolio-hero { position: relative; overflow: hidden; min-height: 100svh; padding: 150px 24px 32px; background: radial-gradient(ellipse at 78% 38%, #818cf812, transparent 48%), radial-gradient(ellipse at 14% 14%, #38bdf809, transparent 50%); }
+  .portfolio-hero { position: relative; overflow: hidden; padding: 150px 24px 32px; background: radial-gradient(ellipse at 78% 38%, #818cf812, transparent 48%), radial-gradient(ellipse at 14% 14%, #38bdf809, transparent 50%); }
   .hero-grid-background { position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(#93a0ba06 1px, transparent 1px), linear-gradient(90deg, #93a0ba06 1px, transparent 1px); background-size: 64px 64px; mask-image: linear-gradient(#000, transparent 90%); }
   .hero-container { position: relative; max-width: 1180px; margin-inline: auto; }
   .hero-layout { display: grid; grid-template-columns: 1.2fr 0.85fr; align-items: center; gap: 85px; }
