@@ -9,7 +9,7 @@ export const portfolioData: PortfolioData = {
     "phone": "+972 566017708",
     "github": "https://github.com/YazanNazal",
     "linkedin": "https://www.linkedin.com/in/yazan-nazzal-124287239/",
-    "summary": "Software Engineer focused on AI agentic engineering, with a strong background in frontend and full-stack development. Builds LLM-powered agents and multi-agent workflows that plan, call tools, and automate real work using Claude, OpenAI, MCP, and LangChain/LangGraph. Experienced in scalable, maintainable applications with React, React Native, Angular, and .NET Core, and taking AI features from prototype to production with evaluation, guardrails, and clean integration into existing products."
+    "summary": "I’m a Software Engineer focused on AI agents and automation, with a background in frontend and full-stack development. I build LLM-powered workflows that use tools, connect to existing systems, and automate practical tasks. My experience spans React, React Native, Angular, and .NET Core, with an emphasis on maintainable code, reliable AI behavior, and clear user experiences."
   },
   "experience": [
     {
