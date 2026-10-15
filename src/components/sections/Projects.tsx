@@ -4,6 +4,8 @@ import { portfolioData } from '../../data/portfolio';
 import type { Project } from '../../types';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Reveal } from '../ui/Reveal';
+
+import { ProjectArchitecture } from '../ui/ProjectArchitecture';
 const filters = [{key:'all',label:'All work'}, {key:'mobile',label:'Mobile'}, {key:'web',label:'Web'}, {key:'fullstack',label:'Full-stack'}] as const;
 function ProjectArtwork({ project }: { project: Project }) {
   return <div className={`work-art work-art-${project.category}`} aria-hidden="true">
@@ -17,7 +19,7 @@ function WorkCard({ project, index }: { project: Project; index: number }) {
   return <Reveal delay={(index % 2) * 90}><article className="work-card">
     <ProjectArtwork project={project}/><div className="work-copy"><div className="work-meta"><span>0{portfolioData.projects.findIndex(item=>item.id===project.id)+1} / {project.category}</span><Layers size={16} aria-hidden="true" /></div>
     <h3>{project.title}</h3><p>{project.description}</p><div className="technology-tags">{project.technologies.slice(0,4).map(tech=><span key={tech}>{tech}</span>)}</div>
-    {hasDetails && <details className="work-details"><summary>Explore the project <ArrowRight size={16} aria-hidden="true" /></summary><div>{project.longDescription && <p>{project.longDescription}</p>}{project.highlights && <ul>{project.highlights.map(point=><li key={point}>{point}</li>)}</ul>}{project.role && <p><strong>My role:</strong> {project.role}</p>}{project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">Source code <ArrowUpRight size={14}/></a>}{project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live demo <ArrowUpRight size={14}/></a>}</div></details>}
+    {hasDetails && <details className="work-details"><summary>Explore the project <ArrowRight size={16} aria-hidden="true" /></summary><div><ProjectArchitecture projectId={project.id} />{project.longDescription && <p>{project.longDescription}</p>}{project.highlights && <ul>{project.highlights.map(point=><li key={point}>{point}</li>)}</ul>}{project.role && <p><strong>My role:</strong> {project.role}</p>}{project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">Source code <ArrowUpRight size={14}/></a>}{project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live demo <ArrowUpRight size={14}/></a>}</div></details>}
     </div></article></Reveal>;
 }
 export function Projects() {

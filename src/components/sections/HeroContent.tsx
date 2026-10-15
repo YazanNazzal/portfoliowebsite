@@ -58,7 +58,7 @@ export function HeroContent({ name, title, summary, email, github, linkedin, isV
         <div className="hero-copy">
           <div className="hero-eyebrow"><span className="status-dot" /> Welcome to my portfolio <span aria-hidden="true">&#x1F1F5;&#x1F1F8;</span></div>
           <h1 id="hero-title" className="hero-name"><span className="hero-intro">I'm</span><span className="gradient-text">{name}</span><span className="hero-name-dot">.</span></h1>
-          <p className="hero-role"><span aria-hidden="true">$</span> <Typewriter reducedMotion={prefersReducedMotion} text={title} /></p>
+          <p className="hero-role"><span aria-hidden="true">❯</span> <Typewriter reducedMotion={prefersReducedMotion} text={title} /></p>
           <p className="hero-pitch">{summary}</p>
           <div className="hero-actions">
             <a className="design-button design-button-primary focus-ring" href="#projects">Explore my work <ArrowDown size={17} aria-hidden="true" /></a>
