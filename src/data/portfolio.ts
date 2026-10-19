@@ -27,6 +27,7 @@ export const portfolioData: PortfolioData = {
         "Use AI coding agents such as Codex, Claude Code, and Cursor to speed up delivery while keeping code reviewed, tested, and maintainable."
       ],
       "technologies": [
+        "Codex",
         "Claude API",
         "OpenAI API",
         "LangGraph",
