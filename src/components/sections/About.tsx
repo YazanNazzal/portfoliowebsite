@@ -5,17 +5,17 @@ import { SectionHeading } from '../ui/SectionHeading';
 export function About() {
  const specialties = [
    { icon: Bot, title: 'AI agents & automation', text: 'LLM-powered workflows, custom MCP integrations, and RAG pipelines with evaluation and guardrails.' },
-   { icon: Code2, title: 'Web interfaces', text: 'Responsive, accessible experiences with React and Angular.' },
+   { icon: Code2, title: 'Stores & booking platforms', text: 'React storefronts, admin dashboards, and appointment booking experiences.' },
    { icon: Smartphone, title: 'Mobile experiences', text: 'Applications built with React Native and Flutter.' },
-   { icon: Layers, title: 'Connected systems', text: 'APIs, databases, and backend development with .NET Core.' },
+   { icon: Layers, title: 'Backends & data', text: 'APIs and application data with FastAPI, PostgreSQL, Supabase, and .NET Core.' },
  ];
  return <section id="about" className="editorial-section" aria-labelledby="about-title"><div className="editorial-container">
    <SectionHeading id="about-title" title="A little about me." subtitle="The person behind the interfaces." />
    <div className="about-editorial-grid">
      <Reveal><div className="about-story"><span className="about-kicker">DEVELOPER. BUILDER. ALWAYS LEARNING.</span>
        <h3>I care about how it works.<br/><span>And how it feels.</span></h3>
-       <p>My work has taken me from digital learning platforms to mobile MVPs, collaborating with teams to turn product requirements into usable interfaces.</p>
-       <p>I value code reviews, clear communication, and maintainable code. I bring that same approach to automation: useful features, careful integration, and evaluation before delivery.</p>
+       <p>I build applications from the interface through to the API and database. My projects include Blossom Dreams, a published salon booking platform; King of Shisha, an online store with an admin dashboard; and a student housing application built with Flutter.</p>
+       <p>I also build AI-powered tools such as Warraq, a bilingual document assistant. Across web, mobile, and AI projects, I focus on useful workflows, clear interfaces, and maintainable code, drawing on my experience with digital learning platforms and mobile MVPs.</p>
        <a href="#projects" className="about-work-link focus-ring">See what I've been building <ArrowUpRight size={17} aria-hidden="true" /></a>
      </div></Reveal>
      <Reveal delay={120}><CodeProfile /></Reveal>

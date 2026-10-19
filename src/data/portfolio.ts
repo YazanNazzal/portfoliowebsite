@@ -7,9 +7,9 @@ export const portfolioData: PortfolioData = {
     "location": "Ramallah, Palestine",
     "email": "Yazan98nazzal@gmail.com",
     "phone": "+972 566017708",
-    "github": "https://github.com/YazanNazal",
+    "github": "https://github.com/YazanNazzal",
     "linkedin": "https://www.linkedin.com/in/yazan-nazzal-124287239/",
-    "summary": "I’m a Software Engineer focused on AI agents and automation, with a background in frontend and full-stack development. I build LLM-powered workflows that use tools, connect to existing systems, and automate practical tasks. My experience spans React, React Native, Angular, and .NET Core, with an emphasis on maintainable code, reliable AI behavior, and clear user experiences."
+    "summary": "I’m a Software Engineer building full-stack web applications, mobile experiences, and AI-powered tools. My work includes online stores with admin dashboards, appointment booking platforms, student housing applications, and a bilingual document AI assistant. I connect React interfaces to backends built with FastAPI, PostgreSQL, Supabase, and .NET Core, with a focus on clear user experiences and maintainable code."
   },
   "experience": [
     {
@@ -361,6 +361,55 @@ export const portfolioData: PortfolioData = {
   ],
   "projects": [
     {
+      "id": "blossom-dreams",
+      "title": "Blossom Dreams — Salon & Booking Platform",
+      "description": "A live full-stack website for a beauty salon in Jounieh, Lebanon, with online appointment booking, an admin workspace, and email confirmations.",
+      "longDescription": "A production website for Blossom Dreams, combining an HTML, JavaScript, and Tailwind CSS frontend with a Python FastAPI backend and PostgreSQL database. Clients can explore treatments, book appointments, and look up their bookings using a booking code or email verification, without creating an account. An admin workspace supports booking administration and password recovery. The production build generates responsive images, splits JavaScript, and serves optimized assets through FastAPI.",
+      "technologies": [
+        "FastAPI",
+        "PostgreSQL",
+        "JavaScript",
+        "Tailwind CSS",
+        "Python",
+        "Resend",
+        "Docker"
+      ],
+      "category": "fullstack",
+      "liveUrl": "https://blossomdreams-lb.com/",
+      "featured": true,
+      "highlights": [
+        "Published salon website with online treatment and appointment booking",
+        "Admin workspace for booking administration and password recovery",
+        "Transactional booking confirmation emails through Resend",
+        "Account-free booking recovery with expiring email verification codes",
+        "Hashed recovery tokens, session revocation, and request rate limits",
+        "Responsive images, critical CSS, and split JavaScript bundles"
+      ]
+    },
+    {
+      "id": "king-of-shisha",
+      "title": "King of Shisha — Online Store",
+      "description": "A full-stack Arabic online store with a React storefront, a Supabase backend, and an admin dashboard.",
+      "longDescription": "A complete e-commerce application combining a React storefront, a Supabase backend, and an admin dashboard for store administration. The Arabic right-to-left shopping experience includes product categories, prices and discounts, detailed product pages, quick previews, a shopping cart, and order submission. The store also includes contact links, delivery and returns policies, and responsive product images backed by Supabase storage.",
+      "technologies": [
+        "React",
+        "Supabase",
+        "CSS",
+        "Render"
+      ],
+      "category": "fullstack",
+      "liveUrl": "https://king-of-shisha.onrender.com/",
+      "featured": true,
+      "highlights": [
+        "React storefront with a Supabase backend",
+        "Admin dashboard for store administration",
+        "Arabic interface with right-to-left layouts",
+        "Category browsing, product pages, and quick previews",
+        "Shopping cart and order submission",
+        "Responsive product images and store contact links"
+      ]
+    },
+    {
       "id": "warraq-pdf-assistant",
       "title": "Warraq — Bilingual Document AI Assistant",
       "description": "Ask questions in Arabic or English across PDF, Word, TXT, and PowerPoint files, with answers grounded in cited document sources.",
@@ -374,7 +423,7 @@ export const portfolioData: PortfolioData = {
         "Vercel"
       ],
       "category": "fullstack",
-      "githubUrl": "https://github.com/yazan77nazzl/Warraq-PDF-Assistant",
+      "githubUrl": "https://github.com/YazanNazzal/Warraq-PDF-Assistant",
       "liveUrl": "https://warraq-pdf-assistant.vercel.app/",
       "featured": true,
       "highlights": [
@@ -402,7 +451,8 @@ export const portfolioData: PortfolioData = {
       "category": "mobile",
       "featured": true,
       "longDescription": "Students can search housing by location, price, rating, and eligibility, explore apartment and room details, and submit reservation requests for chosen dates. Owners manage listings and rooms, approve or reject requests, and review their reservation calendar. Cancellation and renewal workflows support changes to a stay. The current implementation reconstructs the workflows documented in my original graduation-project report.",
-      "githubUrl": "https://github.com/yazan77nazzl/apartment_reservation_app",
+      "githubUrl": "https://github.com/YazanNazzal/apartment_reservation_app",
+      "liveUrl": "https://apartment-reservation-ap-d7a35.web.app/#/login",
       "highlights": [
         "Arabic and English interfaces with right-to-left layout support",
         "Firebase Authentication and separate student/owner routes",
@@ -412,44 +462,86 @@ export const portfolioData: PortfolioData = {
       ]
     },
     {
-      "id": "auth-modules",
-      "title": "Login/Signup Authentication Modules",
-      "description": "A React Native frontend sample combining login and signup interfaces with a map view.",
+      "id": "forme-commerce",
+      "title": "FORME — Storefront & Studio Admin",
+      "description": "A React and TypeScript commerce frontend with a storefront, a separate Studio admin, and shared browser-persisted state powered by Zustand.",
+      "longDescription": "A commerce template with 64 products across eight categories, searchable and filterable catalog pages, product galleries, a wishlist, a persistent shopping bag, and a five-step demo checkout. A separate Studio admin shares Zustand state with the storefront, synchronizing saved changes across tabs on the same origin. The interface supports core English and Arabic shopping labels, RTL layouts, and light and dark preferences. Data stays in localStorage; sign-in, orders, and payments are simulated, with no backend, database, or payment gateway integration.",
       "technologies": [
-        "React Native"
+        "React",
+        "TypeScript",
+        "Zustand",
+        "Radix UI",
+        "localStorage",
+        "Vercel"
       ],
-      "category": "mobile",
+      "category": "web",
+      "liveUrl": "https://forme-commerce.vercel.app/",
       "featured": true,
-      "longDescription": "A mobile UI prototype that brings account-entry screens and map presentation into one application. The project focuses on frontend interface design.",
-      "githubUrl": "https://github.com/YazanNazal/Login-Signup"
+      "highlights": [
+        "64-product catalog with search, filters, sorting, quick views, and wishlists",
+        "Separate Studio admin with shared state and same-origin cross-tab synchronization",
+        "Five-step demo checkout with stock validation and order snapshots",
+        "Core English/Arabic shopping labels, RTL, and light/dark preferences",
+        "Browser-local persistence with simulated accounts, orders, and payments"
+      ]
     },
     {
-      "id": "online-store",
-      "title": "Online Store (E-Commerce Platform)",
-      "description": "An ASP.NET Core 6 backend for managing stores, product categories, and products through REST endpoints.",
+      "id": "math-tutor-website",
+      "title": "math-tutor-website",
+      "description": "Turn Arabic and English student feedback into polished, shareable Story images for a mathematics teacher.",
+      "longDescription": "A browser-only design studio with 23 templates, local portrait uploads, and 1080 × 1920 PNG exports. Long feedback flows into numbered Stories, and the preview uses the same canvas as the exported image. Text and photographs stay in the browser.",
+      "technologies": [
+        "React",
+        "TypeScript",
+        "Canvas API",
+        "Tailwind CSS",
+        "Vite"
+      ],
+      "category": "web",
+      "githubUrl": "https://github.com/YazanNazzal/math-tutor-website",
+      "liveUrl": "https://timaalghoul.vercel.app/",
+      "featured": true,
+      "highlights": [
+        "Arabic and English text with locally bundled fonts",
+        "23 visual templates with proportional portrait cropping",
+        "Multi-page PNG downloads and native sharing on supported browsers"
+      ]
+    },
+    {
+      "id": "employees-api",
+      "title": "Employees & Companies API",
+      "description": "An ASP.NET Core REST API for employee records, company relationships, and employee transfers between companies.",
+      "longDescription": "A .NET 6 backend with endpoints to create, retrieve, update, and delete employees, manage companies, and change an employee's associated company. Entity Framework Core handles persistence with SQL Server and code-first migrations.",
       "technologies": [
         "ASP.NET Core 6",
         "C#",
         "Entity Framework Core",
         "SQL Server",
-        "REST API"
+        "Swagger"
       ],
-      "category": "fullstack",
-      "featured": true,
-      "longDescription": "Implements product listing, lookup, creation, updates, and deletion, alongside store and category management. Entity Framework Core models the relationships between stores, categories, and products using a code-first database approach. The API provides the data layer for a connected frontend.",
-      "githubUrl": "https://github.com/YazanNazal/Stores"
+      "category": "backend",
+      "githubUrl": "https://github.com/YazanNazzal/EmployeesAPI-main",
+      "featured": false,
+      "highlights": [
+        "Employee CRUD and company management endpoints",
+        "Company relationships and employee transfer operations",
+        "Entity Framework Core migrations and Swagger tooling"
+      ]
     },
     {
-      "id": "guessing-game",
-      "title": "Guessing Game Mobile App",
-      "description": "A React Native number game where the phone tries to guess your chosen number using higher-or-lower hints.",
+      "id": "portfolio-website",
+      "title": "Personal Portfolio",
+      "description": "My personal portfolio showcasing software projects, engineering experience, and skills across web, mobile, and AI.",
+      "longDescription": "A responsive React and TypeScript website with project category filters, expandable project details, and direct source-code links. Built with Vite and Tailwind CSS, with reusable sections for experience, skills, and contact information.",
       "technologies": [
-        "React Native"
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS"
       ],
-      "category": "mobile",
-      "featured": false,
-      "longDescription": "Each hint narrows the range for the next guess. The game records the guess history, counts the rounds, and finishes when the device finds the chosen number. An alert rejects hints that contradict the selected number, and the range resets for a new game.",
-      "githubUrl": "https://github.com/YazanNazal/Guessing-Game"
+      "category": "web",
+      "githubUrl": "https://github.com/YazanNazzal/portfoliowebsite",
+      "featured": false
     },
     {
       "id": "poc-react",
@@ -471,8 +563,28 @@ export const portfolioData: PortfolioData = {
         "Project tables show the associated organization and manager",
         "Loading states and search results support data-heavy workflows"
       ]
+    },
+    {
+      "id": "hakini-screen",
+      "title": "Hakini — Arabic Mobile Login UI",
+      "description": "An Arabic login screen prototype built with React Native and Expo, with custom typography and right-aligned form fields.",
+      "longDescription": "An interface study with email and secure password inputs, a remember-me checkbox, and sign-in, password recovery, and registration controls. The sign-in action displays a demo alert; this repository demonstrates the UI rather than a connected authentication service.",
+      "technologies": [
+        "React Native",
+        "Expo",
+        "JavaScript",
+        "Expo Font"
+      ],
+      "category": "mobile",
+      "githubUrl": "https://github.com/YazanNazzal/HakiniScreen",
+      "featured": false,
+      "highlights": [
+        "Custom Kufam and Samim Arabic fonts",
+        "Secure password input and an animated remember-me checkbox"
+      ]
     }
   ],
+
   "languages": [
     {
       "name": "Arabic",

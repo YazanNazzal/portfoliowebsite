@@ -8,7 +8,7 @@ export function CodeProfile() {
   const [active, setActive] = useState<ProfileTab>('About');
   const rows = {
     About: [['name', `"${portfolioData.personal.name}"`], ['focus', '"AI, Web & Mobile"'], ['learning', 'true']],
-    Stack: [['interfaces', '["React", "Angular"]'], ['mobile', '["React Native", "Flutter"]'], ['backend', '".NET Core"'], ['agents', '["LangGraph", "MCP"]']],
+    Stack: [['interfaces', '["React", "Angular"]'], ['mobile', '["React Native", "Flutter"]'], ['backend', '["FastAPI", ".NET Core"]'], ['data', '["PostgreSQL", "Supabase"]'], ['agents', '["LangGraph", "MCP"]']],
     Approach: [['code', '"Readable & maintainable"'], ['experience', '"Clear & accessible"'], ['delivery', '"Build, review, improve"'], ['evaluation', 'true']],
   } satisfies Record<ProfileTab, string[][]>;
   const navigate = (event: KeyboardEvent<HTMLButtonElement>) => {

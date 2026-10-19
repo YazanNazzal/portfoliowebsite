@@ -4,26 +4,31 @@ import { portfolioData } from '../../data/portfolio';
 import type { Project } from '../../types';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Reveal } from '../ui/Reveal';
+import { GitHubIcon } from '../ui/GitHubIcon';
 
 import { ProjectArchitecture } from '../ui/ProjectArchitecture';
-const filters = [{key:'all',label:'All work'}, {key:'mobile',label:'Mobile'}, {key:'web',label:'Web'}, {key:'fullstack',label:'Full-stack'}] as const;
+const filters = [{key:'all',label:'All work'}, {key:'mobile',label:'Mobile'}, {key:'web',label:'Web'}, {key:'fullstack',label:'Full-stack'}, {key:'backend',label:'Backend'}] as const;
 function ProjectArtwork({ project }: { project: Project }) {
   return <div className={`work-art work-art-${project.category}`} aria-hidden="true">
-    <span className="art-caption">{project.category === 'mobile' ? 'MOBILE EXPERIENCE' : project.category === 'fullstack' ? 'FULL-STACK APPLICATION' : 'WEB EXPERIENCE'}</span>
+    <span className="art-caption">{project.category === 'mobile' ? 'MOBILE EXPERIENCE' : project.category === 'fullstack' ? 'FULL-STACK APPLICATION' : project.category === 'backend' ? 'BACKEND / REST API' : 'WEB EXPERIENCE'}</span>
     {project.category === 'mobile' ? <div className="mock-phone"><div className="phone-camera" /><div className="mock-app-icon"><Smartphone size={28} /></div><span className="mock-line wide" /><span className="mock-line" /><div className="mock-tiles"><i/><i/><i/><i/></div><span className="mock-action" /></div> : <div className="mock-browser"><div className="mock-browser-bar"><i/><i/><i/><span/></div><div className="mock-browser-body"><Code2 size={35}/><span className="mock-line wide"/><span className="mock-line"/><div className="mock-columns"><i/><i/><i/></div></div></div>}
     <span className="art-stack">{project.technologies.slice(0,2).join(' / ')}</span>
   </div>;
 }
 function WorkCard({ project, index }: { project: Project; index: number }) {
-  const hasDetails = Boolean(project.longDescription || project.highlights?.length || project.role || project.githubUrl || project.liveUrl);
+  const hasDetails = Boolean(project.longDescription || project.highlights?.length || project.role);
   return <Reveal delay={(index % 2) * 90}><article className="work-card">
-    <ProjectArtwork project={project}/><div className="work-copy"><div className="work-meta"><span>0{portfolioData.projects.findIndex(item=>item.id===project.id)+1} / {project.category}</span><Layers size={16} aria-hidden="true" /></div>
+    <ProjectArtwork project={project}/><div className="work-copy"><div className="work-meta"><span>{String(portfolioData.projects.findIndex(item=>item.id===project.id)+1).padStart(2, '0')} / {project.category}</span><Layers size={16} aria-hidden="true" /></div>
     <h3>{project.title}</h3><p>{project.description}</p><div className="technology-tags">{project.technologies.slice(0,4).map(tech=><span key={tech}>{tech}</span>)}</div>
-    {hasDetails && <details className="work-details"><summary>Explore the project <ArrowRight size={16} aria-hidden="true" /></summary><div><ProjectArchitecture projectId={project.id} />{project.longDescription && <p>{project.longDescription}</p>}{project.highlights && <ul>{project.highlights.map(point=><li key={point}>{point}</li>)}</ul>}{project.role && <p><strong>My role:</strong> {project.role}</p>}{project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">Source code <ArrowUpRight size={14}/></a>}{project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">Live demo <ArrowUpRight size={14}/></a>}</div></details>}
+    {hasDetails && <details className="work-details"><summary>Explore the project <ArrowRight size={16} aria-hidden="true" /></summary><div><ProjectArchitecture projectId={project.id} />{project.longDescription && <p>{project.longDescription}</p>}{project.highlights && <ul>{project.highlights.map(point=><li key={point}>{point}</li>)}</ul>}{project.role && <p><strong>My role:</strong> {project.role}</p>}</div></details>}
+    <div className="work-links">
+      {project.githubUrl ? <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} source code on GitHub`}><GitHubIcon size={16} /> Source code <ArrowUpRight size={14} aria-hidden="true" /></a> : null}
+      {project.liveUrl ? <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} live demo`}>Live demo <ArrowUpRight size={14} aria-hidden="true" /></a> : null}
+    </div>
     </div></article></Reveal>;
 }
 export function Projects() {
-  const [filter,setFilter] = useState<string>('all');
+  const [filter,setFilter] = useState<(typeof filters)[number]['key']>('all');
   const projects = portfolioData.projects.filter(project => filter === 'all' || project.category === filter);
   return <section id="projects" className="editorial-section" aria-labelledby="projects-title"><div className="editorial-container">
     <SectionHeading id="projects-title" title="Ideas, brought to life." subtitle="A selection of applications built with care, curiosity, and code." />

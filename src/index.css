@@ -380,7 +380,7 @@
   .contact-bottom svg { flex-shrink: 0; }
   .work-filters button { min-height: 44px; }
   .profile-languages { flex-wrap: wrap; }
-  .work-grid { align-items: start; gap: 24px; }
+  .work-grid { align-items: stretch; gap: 24px; }
   .work-grid > .scroll-reveal { display: flex; }
   .work-card { display: flex; flex-direction: column; width: 100%; }
   .work-art { flex-shrink: 0; }
@@ -389,6 +389,12 @@
   .work-copy > p { min-height: 5.55em; }
   .work-copy .technology-tags { margin-bottom: 20px; }
   .work-details { margin-top: auto; }
+  .work-links { display: flex; flex-wrap: wrap; gap: 8px 20px; min-height: 61px; padding-top: 16px; margin-top: 16px; border-top: 1px solid #ffffff0b; }
+  .work-links:empty { visibility: hidden; }
+  .work-links a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: #a5b4fc; font-size: 12px; border-radius: 4px; }
+  .work-links a:hover { color: #e8ecf8; }
+  .work-links a:focus-visible { outline: 2px solid #818cf8; outline-offset: 4px; }
+  .work-art-backend { background: radial-gradient(ellipse at 50% 100%, #34d39922, transparent 70%), linear-gradient(125deg,#10251f,#101927); }
   .work-details summary { min-height: 24px; gap: 16px; }
   .work-details summary svg { flex-shrink: 0; }
   .work-details a { min-height: 44px; margin-top: 12px; }
@@ -400,6 +406,7 @@
 }
 @media (max-width: 767px) {
   .work-copy { padding: 24px; }
+  .work-links:empty { display: none; }
   .work-copy h3, .work-copy > p { min-height: 0; }
   .work-grid, .expertise-grid { gap: 24px; }
 }

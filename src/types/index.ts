@@ -49,7 +49,7 @@ export interface Project {
   description: string;
   longDescription?: string;
   technologies: string[];
-  category: 'mobile' | 'web' | 'fullstack';
+  category: 'mobile' | 'web' | 'fullstack' | 'backend';
   image?: string;
   githubUrl?: string;
   liveUrl?: string;
