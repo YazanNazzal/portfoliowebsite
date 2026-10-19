@@ -8,7 +8,7 @@ export const portfolioData: PortfolioData = {
     "email": "Yazan98nazzal@gmail.com",
     "phone": "+972 566017708",
     "github": "https://github.com/YazanNazzal",
-    "linkedin": "https://www.linkedin.com/in/yazan-nazzal-124287239/",
+    "linkedin": "https://www.linkedin.com/in/yazan-nazzal-dev",
     "summary": "I’m a Software Engineer building full-stack web applications, mobile experiences, and AI-powered tools. My work includes online stores with admin dashboards, appointment booking platforms, student housing applications, and a bilingual document AI assistant. I connect React interfaces to backends built with FastAPI, PostgreSQL, Supabase, and .NET Core, with a focus on clear user experiences and maintainable code."
   },
   "experience": [
