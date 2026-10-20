@@ -2,9 +2,9 @@ import { ArrowDown, GitBranch } from 'lucide-react';
 
 const flows: Record<string, { label: string; detail: string }[]> = {
   'forme-commerce': [
-    { label: 'Storefront & Studio', detail: 'Separate React and TypeScript shopping and admin interfaces' },
-    { label: 'Shared Zustand state', detail: 'Catalog changes, cart, stock validation, and demo orders' },
-    { label: 'Browser persistence', detail: 'localStorage with same-origin cross-tab synchronization' },
+    { label: 'Storefront & owner dashboard', detail: 'Next.js with React, TypeScript, and Zustand browser state' },
+    { label: 'Next.js API', detail: 'Session checks, Zod validation, and transactional order processing' },
+    { label: 'PostgreSQL persistence', detail: 'Store data, accounts, orders, and Sharp-processed image variants' },
   ],
   'blossom-dreams': [
     { label: 'Salon website', detail: 'HTML, JavaScript, and Tailwind CSS booking interface' },

@@ -362,6 +362,35 @@ export const portfolioData: PortfolioData = {
   ],
   "projects": [
     {
+      "id": "forme-commerce",
+      "title": "Lumma — Customizable E-commerce Platform",
+      "description": "A full-stack e-commerce platform with a customizable store identity, a bilingual storefront, and an owner dashboard, built with Next.js and PostgreSQL.",
+      "longDescription": "A single-store commerce application combining a React and TypeScript storefront, an owner dashboard, and Next.js Route Handlers. Store owners can customize the name, logo, colors, currency, and shipping settings, and manage products, categories, inventory, customers, discounts, and orders. Customers can browse and filter products, select colors and sizes, save favorites, manage their cart, and place cash-on-delivery orders with server-side stock validation. PostgreSQL persists store data, sessions, orders, and responsive images processed with Sharp; Zustand manages browser state and shopping preferences. The interface supports Arabic and English, RTL layouts, and light and dark themes. Android WebView and iOS WKWebView wrappers display the hosted store; public app-store releases and an online payment gateway are not included.",
+      "technologies": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "PostgreSQL",
+        "Zustand",
+        "Zod",
+        "Sharp",
+        "Radix UI",
+        "Vercel"
+      ],
+      "category": "fullstack",
+      "liveUrl": "https://lumma-store.vercel.app/",
+      "featured": true,
+      "highlights": [
+        "Configurable store branding, currency, shipping, and appearance from the owner dashboard",
+        "Product colors and linked images, inventory, categories, customers, discounts, and order management",
+        "Cash-on-delivery checkout with server-side totals, stock validation, and transactional order creation",
+        "Database-backed accounts and sessions, protected admin APIs, and Zod input validation",
+        "Sharp image processing with responsive variants stored in PostgreSQL",
+        "Arabic and English interfaces with RTL layouts and light/dark themes",
+        "Android and iOS wrappers for the hosted store, with mobile builds prepared for testing"
+      ]
+    },
+    {
       "id": "blossom-dreams",
       "title": "Blossom Dreams — Salon & Booking Platform",
       "description": "A live full-stack website for a beauty salon in Jounieh, Lebanon, with online appointment booking, an admin workspace, and email confirmations.",
@@ -460,30 +489,6 @@ export const portfolioData: PortfolioData = {
         "Real-time participant chat with timestamps and read status",
         "In-app notices and tenant reviews linked to eligible stays",
         "Sandbox checkout in the local demo; no live payment gateway or real payment processing"
-      ]
-    },
-    {
-      "id": "forme-commerce",
-      "title": "FORME — Storefront & Studio Admin",
-      "description": "A React and TypeScript commerce frontend with a storefront, a separate Studio admin, and shared browser-persisted state powered by Zustand.",
-      "longDescription": "A commerce template with 64 products across eight categories, searchable and filterable catalog pages, product galleries, a wishlist, a persistent shopping bag, and a five-step demo checkout. A separate Studio admin shares Zustand state with the storefront, synchronizing saved changes across tabs on the same origin. The interface supports core English and Arabic shopping labels, RTL layouts, and light and dark preferences. Data stays in localStorage; sign-in, orders, and payments are simulated, with no backend, database, or payment gateway integration.",
-      "technologies": [
-        "React",
-        "TypeScript",
-        "Zustand",
-        "Radix UI",
-        "localStorage",
-        "Vercel"
-      ],
-      "category": "web",
-      "liveUrl": "https://forme-commerce.vercel.app/",
-      "featured": true,
-      "highlights": [
-        "64-product catalog with search, filters, sorting, quick views, and wishlists",
-        "Separate Studio admin with shared state and same-origin cross-tab synchronization",
-        "Five-step demo checkout with stock validation and order snapshots",
-        "Core English/Arabic shopping labels, RTL, and light/dark preferences",
-        "Browser-local persistence with simulated accounts, orders, and payments"
       ]
     },
     {
