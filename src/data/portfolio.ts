@@ -362,6 +362,36 @@ export const portfolioData: PortfolioData = {
   ],
   "projects": [
     {
+      "id": "devhub",
+      "title": "DevHub — Developer Workspace",
+      "description": "A full-stack workspace bringing projects, GitHub repositories, deployments, website monitoring, tasks, notes, and clients together in one place.",
+      "longDescription": "DevHub gives developers a private workspace to organize their projects and connect related repositories and hosting services. Built with Next.js, React, TypeScript, FastAPI, and PostgreSQL, it supports GitHub OAuth sign-in and read-only integrations with GitHub, Vercel, and Render. Developers can review synchronized repositories, published sites, and deployment history, run website health checks, track tasks in Kanban or list views, write Markdown notes with autosave, and manage client records. A dashboard brings together project activity, task progress, and recorded monitoring results. An optional Python worker processes scheduled synchronization, recurring health checks, and reminders while the browser is closed.",
+      "technologies": [
+        "Next.js",
+        "FastAPI",
+        "TypeScript",
+        "PostgreSQL",
+        "React",
+        "Python",
+        "Tailwind CSS",
+        "TanStack Query",
+        "SQLAlchemy",
+        "Docker"
+      ],
+      "category": "fullstack",
+      "liveUrl": "https://devhub-yazan.vercel.app/",
+      "featured": true,
+      "highlights": [
+        "GitHub OAuth sign-in with private workspaces and per-user data isolation",
+        "Read-only GitHub, Vercel, and Render integrations with resumable synchronization",
+        "Published sites and deployment history collected across connected hosting providers",
+        "Website health checks with response-time charts, incident history, and in-app alerts",
+        "Kanban and list task views, autosaving Markdown notes, and client management",
+        "Light, dark, and system themes with responsive layouts",
+        "Optional background worker for scheduled checks, synchronization, and reminders"
+      ]
+    },
+    {
       "id": "forme-commerce",
       "title": "Lumma — Customizable E-commerce Platform",
       "description": "A full-stack e-commerce platform with a customizable store identity, a bilingual storefront, and an owner dashboard, built with Next.js and PostgreSQL.",
