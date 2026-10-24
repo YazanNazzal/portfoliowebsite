@@ -418,7 +418,7 @@ export const portfolioData: PortfolioData = {
       ],
       "category": "fullstack",
       "liveUrl": "https://devhub-yazan.vercel.app/",
-      "desktopUrl": "https://github.com/YazanNazzal/DevHub-Releases/releases/latest",
+      "desktopUrl": "https://github.com/YazanNazzal/DevHub-Releases/releases/download/v0.1.3/DevHub-Setup-0.1.3-x64.exe",
       "featured": true,
       "highlights": [
         "Electron desktop app for Windows x64 with a public installer and access to the hosted workspace",

@@ -24,7 +24,7 @@ function WorkCard({ project, index }: { project: Project; index: number }) {
     <div className="work-links">
       {project.githubUrl ? <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" aria-label={`View ${project.title} source code on GitHub`}><GitHubIcon size={16} /> Source code <ArrowUpRight size={14} aria-hidden="true" /></a> : null}
       {project.liveUrl ? <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" aria-label={`Open ${project.title} live demo`}>Live demo <ArrowUpRight size={14} aria-hidden="true" /></a> : null}
-      {project.desktopUrl ? <a href={project.desktopUrl} target="_blank" rel="noopener noreferrer" aria-label={`Download ${project.title} for Windows`}>Download for Windows <ArrowUpRight size={14} aria-hidden="true" /></a> : null}
+      {project.desktopUrl ? <a href={project.desktopUrl} aria-label={`Download ${project.title} for Windows`}>Download for Windows <ArrowUpRight size={14} aria-hidden="true" /></a> : null}
     </div>
     </div></article></Reveal>;
 }
