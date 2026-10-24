@@ -38,11 +38,12 @@ export const portfolioData: PortfolioData = {
     },
     {
       "id": "emicrolearn",
+      "recommendationUrl": "/Yazan_Nazzal_eMicroLearn_Recommendation.pdf",
       "company": "eMicrolearn (Subsidiary of Pitman)",
       "position": "Front-End Developer",
       "location": "Remote",
-      "startDate": "Dec 2022",
-      "endDate": "Jul 2025",
+      "startDate": "Mar 2022",
+      "endDate": "Nov 2025",
       "current": false,
       "description": [
         "Handling front-end development of the innovative iBook digital learning platform, delivering responsive and user-friendly interfaces.",

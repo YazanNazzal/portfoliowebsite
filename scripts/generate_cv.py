@@ -122,7 +122,7 @@ y = section("Experience", y + 13)
 
 experience_copy = {
     "freelance-ai-agentic": "Design and build AI agents, multi-agent workflows, and custom MCP integrations with REST APIs, databases, and files. Develop RAG pipelines with evaluation, guardrails, tracing, and cost controls. Use Codex, Claude Code, and Cursor with code review and testing.",
-    "emicrolearn": "Built responsive interfaces and product features for the iBook digital learning platform. Collaborated across teams to improve performance and user experience while maintaining scalable React code.",
+    "emicrolearn": "Developed, enhanced, and maintained iBook digital learning platform features and integrated educational content. Implemented new functionality, debugged technical issues, and collaborated with technical and content teams to improve performance, user experience, and reliability. Contributed to database interaction, system testing, and quality assurance.",
     "hexasol": "Developed React applications, led frontend work for the Hakini React Native project, and delivered the AZEZA mobile MVP. Contributed to code reviews and team knowledge sharing.",
     "iconnect": "Completed full-stack training in Angular and .NET Core, with practical projects covering API development, database design, and frontend-backend integration.",
 }
@@ -134,6 +134,9 @@ for experience in data["experience"]:
     dates = f'{experience["startDate"]} - {experience["endDate"]}'
     pdf.drawRightString(RIGHT, PAGE_H - y + 3, dates)
     y = paragraph(clean(experience_copy[experience["id"]]), LEFT, y + 2)
+    if experience.get("recommendationUrl"):
+        y = paragraph(link("Recommendation letter", "https://yazan-nazzal.vercel.app" + experience["recommendationUrl"]),
+                      LEFT, y + 2, size=9.12, leading=11.5)
     y += 8
 
 y = section("Education", y + 2)

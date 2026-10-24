@@ -20,6 +20,7 @@ export interface Experience {
   description: string[];
   technologies: string[];
   highlights?: string[];
+  recommendationUrl?: string;
 }
 
 export interface Education {
