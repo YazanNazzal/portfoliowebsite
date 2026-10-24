@@ -101,7 +101,7 @@ def header():
     profile_links = [
         link("GitHub: YazanNazzal", personal["github"]),
         link("LinkedIn: yazan-nazzal-dev", personal["linkedin"]),
-        link("Portfolio", "https://portfoliowebsite-eta-teal.vercel.app/"),
+        link("Portfolio", "https://yazan-nazzal.vercel.app/"),
     ]
     paragraph(" &nbsp; | &nbsp; ".join(profile_links), LEFT, 91, size=9.12, leading=12)
     pdf.setStrokeColor(HexColor(HEADING))
@@ -190,9 +190,9 @@ for project_id, description in project_copy.items():
     y += 8
 
 y = paragraph(f'<b><font color="{NAVY}">Additional work:</font></b> ' + " &nbsp; | &nbsp; ".join([
-    link("Personal Portfolio", projects["portfolio-website"]["githubUrl"]),
+    link("Personal Portfolio", "https://yazan-nazzal.vercel.app/"),
     link("Hakini - Arabic Login UI", projects["hakini-screen"]["githubUrl"]),
-    "ReactJS Admin Dashboard POC",
+    f'<font color="{BLUE}">ReactJS Admin Dashboard POC</font>',
 ]), LEFT, y, size=9.12, leading=11.5)
 
 y = section("Languages", y + 13)
