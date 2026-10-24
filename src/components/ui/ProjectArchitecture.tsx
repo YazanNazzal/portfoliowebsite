@@ -1,6 +1,11 @@
 import { ArrowDown, GitBranch } from 'lucide-react';
 
 const flows: Record<string, { label: string; detail: string }[]> = {
+  'devhub': [
+    { label: 'Web & Windows workspace', detail: 'Next.js and React interface, with an Electron desktop app' },
+    { label: 'FastAPI & PostgreSQL', detail: 'Private projects, team messages, tasks, and shared community discussions' },
+    { label: 'Integrations & background worker', detail: 'Read-only GitHub, Vercel, and Render imports, website checks, and reminders' },
+  ],
   'forme-commerce': [
     { label: 'Storefront & owner dashboard', detail: 'Next.js with React, TypeScript, and Zustand browser state' },
     { label: 'Next.js API', detail: 'Session checks, Zod validation, and transactional order processing' },

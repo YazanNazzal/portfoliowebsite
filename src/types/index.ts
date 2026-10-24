@@ -53,6 +53,7 @@ export interface Project {
   image?: string;
   githubUrl?: string;
   liveUrl?: string;
+  desktopUrl?: string;
   featured: boolean;
   highlights?: string[];
   role?: string;

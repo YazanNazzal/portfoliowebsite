@@ -8,7 +8,7 @@ export const portfolioData: PortfolioData = {
     "email": "Yazan98nazzal@gmail.com",
     "phone": "+972 566017708",
     "github": "https://github.com/YazanNazzal",
-    "linkedin": "https://www.linkedin.com/in/yazan-nazzal-dev",
+    "linkedin": "https://www.linkedin.com/in/yazan-nazzal-dev/",
     "summary": "I’m a Software Engineer building full-stack web applications, mobile experiences, and AI-powered tools. My work includes online stores with admin dashboards, appointment booking platforms, student housing applications, and a bilingual document AI assistant. I connect React interfaces to backends built with FastAPI, PostgreSQL, Supabase, and .NET Core, with a focus on clear user experiences and maintainable code."
   },
   "experience": [
@@ -136,7 +136,13 @@ export const portfolioData: PortfolioData = {
       "category": "Frontend",
       "skills": [
         {
-          "name": "React JS"
+          "name": "React"
+        },
+        {
+          "name": "Next.js"
+        },
+        {
+          "name": "Tailwind CSS"
         },
         {
           "name": "Angular"
@@ -152,6 +158,21 @@ export const portfolioData: PortfolioData = {
     {
       "category": "Backend",
       "skills": [
+        {
+          "name": "FastAPI"
+        },
+        {
+          "name": "PostgreSQL"
+        },
+        {
+          "name": "SQLAlchemy"
+        },
+        {
+          "name": "Alembic"
+        },
+        {
+          "name": "Supabase"
+        },
         {
           "name": ".NET Core"
         },
@@ -174,6 +195,9 @@ export const portfolioData: PortfolioData = {
         },
         {
           "name": "React Native"
+        },
+        {
+          "name": "Expo"
         }
       ]
     },
@@ -203,6 +227,21 @@ export const portfolioData: PortfolioData = {
     {
       "category": "Tools & Concepts",
       "skills": [
+        {
+          "name": "Git & GitHub"
+        },
+        {
+          "name": "Docker"
+        },
+        {
+          "name": "Electron"
+        },
+        {
+          "name": "Vite"
+        },
+        {
+          "name": "Vercel & Render"
+        },
         {
           "name": "OOP"
         },
@@ -330,9 +369,6 @@ export const portfolioData: PortfolioData = {
         },
         {
           "name": "Langfuse"
-        },
-        {
-          "name": "Docker"
         }
       ]
     },
@@ -364,8 +400,8 @@ export const portfolioData: PortfolioData = {
     {
       "id": "devhub",
       "title": "DevHub — Developer Workspace",
-      "description": "A full-stack workspace bringing projects, GitHub repositories, deployments, website monitoring, tasks, notes, and clients together in one place.",
-      "longDescription": "DevHub gives developers a private workspace to organize their projects and connect related repositories and hosting services. Built with Next.js, React, TypeScript, FastAPI, and PostgreSQL, it supports GitHub OAuth sign-in and read-only integrations with GitHub, Vercel, and Render. Developers can review synchronized repositories, published sites, and deployment history, run website health checks, track tasks in Kanban or list views, write Markdown notes with autosave, and manage client records. A dashboard brings together project activity, task progress, and recorded monitoring results. An optional Python worker processes scheduled synchronization, recurring health checks, and reminders while the browser is closed.",
+      "description": "A developer command center for web and Windows, combining project management, repositories, deployments, monitoring, team messaging, and community discussions.",
+      "longDescription": "DevHub gives developers a private workspace on the web and through an Electron desktop app for Windows. Built with Next.js, React, TypeScript, FastAPI, and PostgreSQL, it supports GitHub OAuth sign-in and read-only integrations with GitHub, Vercel, and Render. Developers can review synchronized repositories and published sites, run website health checks, organize tasks in Kanban or list views, write autosaving Markdown notes, and manage clients. Teams can accept project invitations, assign work, exchange private project messages, and comment on tasks. A separate community space lets signed-in members share questions and insights, reply in Markdown, search discussions, and mark threads as resolved while private workspace records stay isolated. A Python worker handles scheduled imports, health checks, and reminders while the app is closed. The Windows x64 installer connects to the hosted service and requires internet and a DevHub account, with no local database or developer tools needed; updates are manual.",
       "technologies": [
         "Next.js",
         "FastAPI",
@@ -376,12 +412,18 @@ export const portfolioData: PortfolioData = {
         "Tailwind CSS",
         "TanStack Query",
         "SQLAlchemy",
+        "Alembic",
+        "Electron",
         "Docker"
       ],
       "category": "fullstack",
       "liveUrl": "https://devhub-yazan.vercel.app/",
+      "desktopUrl": "https://github.com/YazanNazzal/DevHub-Releases/releases/latest",
       "featured": true,
       "highlights": [
+        "Electron desktop app for Windows x64 with a public installer and access to the hosted workspace",
+        "Community questions and insights with Markdown replies, search, author controls, and resolved threads",
+        "Team invitations, task assignments, private project messaging, and task comments",
         "GitHub OAuth sign-in with private workspaces and per-user data isolation",
         "Read-only GitHub, Vercel, and Render integrations with resumable synchronization",
         "Published sites and deployment history collected across connected hosting providers",
@@ -576,7 +618,7 @@ export const portfolioData: PortfolioData = {
         "Tailwind CSS"
       ],
       "category": "web",
-      "githubUrl": "https://github.com/YazanNazzal/portfoliowebsite",
+      "githubUrl": "https://github.com/YazanNazzal/yazan-portfolio",
       "featured": false
     },
     {

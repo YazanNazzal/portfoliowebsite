@@ -45,3 +45,5 @@ coverage/
 
 # Local CV drafts and exports
 deliverables/
+tmp/
+output/
