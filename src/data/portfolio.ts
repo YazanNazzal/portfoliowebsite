@@ -40,15 +40,15 @@ export const portfolioData: PortfolioData = {
       "id": "emicrolearn",
       "recommendationUrl": "/Yazan_Nazzal_eMicroLearn_Recommendation.pdf",
       "company": "eMicrolearn (Subsidiary of Pitman)",
-      "position": "Front-End Developer",
+      "position": "Software Developer",
       "location": "Remote",
       "startDate": "Mar 2022",
       "endDate": "Nov 2025",
       "current": false,
       "description": [
-        "Handling front-end development of the innovative iBook digital learning platform, delivering responsive and user-friendly interfaces.",
-        "Collaborate with cross-functional teams to build high-quality features, optimize performance, and improve user engagement globally.",
-        "Maintain clean, scalable React code following best practices and modern development standards."
+        "Developed, enhanced, and maintained iBook digital learning platform features and integrated educational content.",
+        "Implemented new functionality, debugged technical issues, and collaborated with technical and content teams to improve performance, user experience, and reliability.",
+        "Contributed to database interaction, system testing, and quality assurance while writing efficient, maintainable code."
       ],
       "technologies": [
         "React",
@@ -59,9 +59,9 @@ export const portfolioData: PortfolioData = {
         "Agile"
       ],
       "highlights": [
-        "Delivered responsive interfaces for a global digital learning platform",
-        "Collaborated with cross-functional teams across multiple time zones",
-        "Maintained high code quality standards through code reviews and best practices"
+        "Developed platform features and integrated digital educational content",
+        "Collaborated with project managers, curriculum specialists, designers, and developers",
+        "Supported application reliability through debugging, testing, and quality assurance"
       ]
     },
     {
@@ -676,8 +676,8 @@ export const portfolioData: PortfolioData = {
   ],
   "references": [
     {
-      "name": "Tahani Sabihat",
-      "title": "Manager at eMicrolearn (Pitman)",
+      "name": "Tahani Sbeahat",
+      "title": "Operational and Finance Director at eMicrolearn Ltd",
       "email": "Tahani.sbeahat@pitman-training.com",
       "company": "eMicrolearn / Pitman Training"
     },
